@@ -88,7 +88,7 @@ export const Footer = () => {
               <li className="flex items-start">
                 <MapPinIcon size={20} className="mr-2 flex-shrink-0 mt-1 text-emerald-300" />
                 <span className="text-emerald-100">
-                  40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka
+                  40/1 Galouawatta, Upland, Peradeniya, Sri Lanka
                 </span>
               </li>
               <li className="flex items-center">

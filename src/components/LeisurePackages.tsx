@@ -10,6 +10,7 @@ type Package = {
   contactInfo: {
     phone: string;
     email: string;
+    location: string;
   };
 };
 
@@ -31,6 +32,7 @@ const packages: Package[] = [
     contactInfo: {
       phone: '+94 123 456 789',
       email: 'connect@nature.com',
+      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
     },
   },
   {
@@ -50,6 +52,7 @@ const packages: Package[] = [
     contactInfo: {
       phone: '+94 987 654 321',
       email: 'harmony@nature.com',
+      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
     },
   },
   {
@@ -69,6 +72,7 @@ const packages: Package[] = [
     contactInfo: {
       phone: '+94 456 789 012',
       email: 'mindbody@challenge.com',
+      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
     },
   },
   {
@@ -87,6 +91,7 @@ const packages: Package[] = [
     contactInfo: {
       phone: '+94 789 123 456',
       email: 'photography@tour.com',
+      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
     },
   },
 ];
@@ -162,6 +167,7 @@ export const LeisurePackages = () => {
               <h4 className="font-medium text-emerald-800 mb-2">Contact Information</h4>
               <p className="text-gray-600">Phone: <a href={`tel:${activePackage.contactInfo.phone}`} className="text-emerald-800">{activePackage.contactInfo.phone}</a></p>
               <p className="text-gray-600">Email: <a href={`mailto:${activePackage.contactInfo.email}`} className="text-emerald-800">{activePackage.contactInfo.email}</a></p>
+              <p className="text-gray-600">Location: <span className="text-emerald-800">{activePackage.contactInfo.location}</span></p>
             </div>
             <button className="bg-emerald-800 text-white hover:bg-emerald-700 transition-colors px-6 py-3 rounded-sm">
               Book This Package
