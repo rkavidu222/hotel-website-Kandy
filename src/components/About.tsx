@@ -15,7 +15,7 @@ export const About = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop" alt="Villa Vajrapani resort view" className="rounded-md shadow-lg object-cover h-full w-full" />
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max500/511787071.jpg?k=be66e457fa72837f8e0ce59aca478a47d58795ea8afb38f41bf5afcd381008da&o=" alt="Villa Vajrapani resort view" className="rounded-md shadow-lg object-cover h-full w-full" />
           </div>
           <div>
             <h3 className="text-2xl font-serif font-medium text-gray-900 mb-4">

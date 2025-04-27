@@ -2,7 +2,7 @@ import React from 'react';
 export const Hero = () => {
   return <section id="home" className="relative h-screen w-full bg-black">
       <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1580137189272-c9379f8864fd?q=80&w=1920&auto=format&fit=crop')"
+      backgroundImage: "url('https://cf.bstatic.com/xdata/images/hotel/max500/162718807.jpg?k=4730ad7b1824d627782f1603c32bc94b38b6a784cbee77e779d21011990e152d&o=')"
     }} />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
