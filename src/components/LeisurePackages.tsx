@@ -7,6 +7,10 @@ type Package = {
   description: string;
   images: string[];
   activities: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+  };
 };
 
 const packages: Package[] = [
@@ -16,14 +20,18 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'A short but immersive experience to connect with the natural world through guided activities.',
     images: [
-      'https://images.unsplash.com/photo-1490475636666-2b9f0fa1c937?q=80&w=800&auto=format&fit=crop', // Nature scene
-      'https://images.unsplash.com/photo-1496271941963-075f7e3c0c63?q=80&w=800&auto=format&fit=crop', // Tranquil nature scene
+      'https://cf.bstatic.com/xdata/images/hotel/max500/162718709.jpg?k=15ecbe004a21706fb4c96bce2b347c6ff3c122da2766c9a9e8947a32def5c9f0&o=',
+      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop',
     ],
     activities: [
       'Day 1: Meet and greet, rest, birdwatching tour',
       'Night: Sky gazing experience',
       'Day 2: Katusukonda hike and forest bathing',
     ],
+    contactInfo: {
+      phone: '+94 123 456 789',
+      email: 'connect@nature.com',
+    },
   },
   {
     id: 2,
@@ -31,14 +39,18 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Deepen your connection with nature through extended exploration and mindful experiences.',
     images: [
-      'https://images.unsplash.com/photo-1481896512707-47ec4d5131c5?q=80&w=800&auto=format&fit=crop', // Mountain view
-      'https://images.unsplash.com/photo-1490177739841-9e5e5eac26d3?q=80&w=800&auto=format&fit=crop', // Calm nature scene
+      'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
     ],
     activities: [
       'Day 1: Meet and greet, evening bird watching tour',
       'Day 2: Forest bathing and Hanthana hike',
       'Day 3: Vajrapani garden experience - blending with nature',
     ],
+    contactInfo: {
+      phone: '+94 987 654 321',
+      email: 'harmony@nature.com',
+    },
   },
   {
     id: 3,
@@ -46,14 +58,18 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Push your boundaries while exploring historic tea estates and breathtaking landscapes.',
     images: [
-      'https://images.unsplash.com/photo-1560795659-3b6b13d9a31f?q=80&w=800&auto=format&fit=crop', // Scenic tea estates
-      'https://images.unsplash.com/photo-1479529841143-dc04db8ccfd5?q=80&w=800&auto=format&fit=crop', // Tea fields
+      'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop',
     ],
     activities: [
       'Day 1: Cross Katusukonda hike to enter Pekoe trail stage one, visit first tea estate of Sri Lanka',
       'Day 2: Tea experience - tea plucking, processing, and tea factory tour',
       'Day 3: Tour to Ambuluwawa',
     ],
+    contactInfo: {
+      phone: '+94 456 789 012',
+      email: 'mindbody@challenge.com',
+    },
   },
   {
     id: 4,
@@ -61,13 +77,17 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'Capture the beauty of Vajrapani gardens and the Hanthana mountain range through your lens.',
     images: [
-      'https://images.unsplash.com/photo-1500780370991-c4b59f72a7a5?q=80&w=800&auto=format&fit=crop', // Birds and nature
-      'https://images.unsplash.com/photo-1507024025012-4d8da5b7f67f?q=80&w=800&auto=format&fit=crop', // Majestic mountain view
+      'https://images.unsplash.com/photo-1520808663317-647b476a81b9?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=800&auto=format&fit=crop',
     ],
     activities: [
       'Day 1: Guided photography sessions in Vajrapani garden',
       'Day 2: Bird watching and landscape photography in the Hanthana mountain range',
     ],
+    contactInfo: {
+      phone: '+94 789 123 456',
+      email: 'photography@tour.com',
+    },
   },
 ];
 
@@ -109,12 +129,18 @@ export const LeisurePackages = () => {
             <button
               key={pkg.id}
               onClick={() => handlePackageClick(pkg)}
-              className={`p-4 text-left border-b-2 transition-all ${
-                activePackage.id === pkg.id ? 'border-emerald-800 bg-emerald-50' : 'border-transparent hover:bg-gray-50'
-              }`}
+              className={`relative p-4 text-left border-2 transition-all ${
+                activePackage.id === pkg.id
+                  ? 'border-emerald-800 bg-emerald-200 text-emerald-800 shadow-lg transform scale-105'
+                  : 'border-transparent hover:bg-emerald-50 hover:shadow-md hover:scale-105'
+              } cursor-pointer rounded-md transition-transform duration-300 ease-in-out`}
             >
               <h3 className="font-medium text-lg">{pkg.title}</h3>
               <p className="text-sm text-gray-500">{pkg.duration}</p>
+
+              <span className="absolute bottom-4 left-4 text-white bg-emerald-800 text-sm font-medium py-1 px-3 rounded-full opacity-0 transition-opacity duration-300 hover:opacity-100">
+                Click for more details
+              </span>
             </button>
           ))}
         </div>
@@ -131,6 +157,11 @@ export const LeisurePackages = () => {
                   <li key={index} className="text-gray-600">{activity}</li>
                 ))}
               </ul>
+            </div>
+            <div className="mb-6">
+              <h4 className="font-medium text-emerald-800 mb-2">Contact Information</h4>
+              <p className="text-gray-600">Phone: <a href={`tel:${activePackage.contactInfo.phone}`} className="text-emerald-800">{activePackage.contactInfo.phone}</a></p>
+              <p className="text-gray-600">Email: <a href={`mailto:${activePackage.contactInfo.email}`} className="text-emerald-800">{activePackage.contactInfo.email}</a></p>
             </div>
             <button className="bg-emerald-800 text-white hover:bg-emerald-700 transition-colors px-6 py-3 rounded-sm">
               Book This Package
