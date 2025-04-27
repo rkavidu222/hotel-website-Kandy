@@ -1,61 +1,108 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from 'lucide-react';
+
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <nav className="bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+
+  return (
+    <nav className="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-lg transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-serif font-medium text-emerald-800">
+              <h1 className="text-3xl font-serif font-semibold text-emerald-800 hover:text-emerald-900 transform transition-all hover:scale-105">
                 Villa Vajrapani
               </h1>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-emerald-800 transition-colors px-3 py-2 text-sm font-medium">
+              <a
+                href="#home"
+                className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105"
+              >
                 Home
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#about" className="text-gray-600 hover:text-emerald-800 transition-colors px-3 py-2 text-sm font-medium">
+              <a
+                href="#about"
+                className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105"
+              >
                 About
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#packages" className="text-gray-600 hover:text-emerald-800 transition-colors px-3 py-2 text-sm font-medium">
+              <a
+                href="#packages"
+                className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105"
+              >
                 Leisure Packages
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#excursions" className="text-gray-600 hover:text-emerald-800 transition-colors px-3 py-2 text-sm font-medium">
+              <a
+                href="#excursions"
+                className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105"
+              >
                 Excursions
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <button className="bg-emerald-800 text-white hover:bg-emerald-700 transition-colors px-4 py-2 rounded-sm text-sm">
+              <button className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white hover:bg-gradient-to-l transition-all px-4 py-2 rounded-sm text-sm transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Book Now
               </button>
             </div>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-emerald-800 focus:outline-none">
-              {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-emerald-800 focus:outline-none transition-all transform hover:scale-105"
+            >
+              {isMenuOpen ? (
+                <XIcon size={24} className="transition-transform transform rotate-180" />
+              ) : (
+                <MenuIcon size={24} className="transition-transform transform rotate-0" />
+              )}
             </button>
           </div>
         </div>
       </div>
-      {isMenuOpen && <div className="md:hidden bg-white shadow-lg">
+
+      {/* Mobile Menu - Slide In Animation */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg transform transition-transform duration-500 ease-in-out translate-x-0">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800">
+            <a
+              href="#home"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105"
+            >
               Home
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800">
+            <a
+              href="#about"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105"
+            >
               About
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#packages" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800">
+            <a
+              href="#packages"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105"
+            >
               Leisure Packages
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#excursions" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800">
+            <a
+              href="#excursions"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105"
+            >
               Excursions
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <button className="w-full mt-2 bg-emerald-800 text-white hover:bg-emerald-700 transition-colors px-4 py-2 rounded-sm text-sm">
+            <button className="w-full mt-2 bg-gradient-to-r from-emerald-600 to-emerald-800 text-white hover:bg-gradient-to-l transition-all px-4 py-2 rounded-sm text-sm transform hover:scale-105 shadow-lg hover:shadow-xl">
               Book Now
             </button>
           </div>
-        </div>}
-    </nav>;
+        </div>
+      )}
+    </nav>
+  );
 };
