@@ -166,7 +166,7 @@ export const Excursions = () => {
       {selectedExcursion &&
         createPortal(
           <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-2 sm:px-4">
-            <div className="bg-white p-4 sm:p-6 rounded-lg w-full max-w-xs sm:max-w-lg md:max-w-2xl relative overflow-y-auto max-h-[90vh] shadow-xl">
+            <div className="bg-white p-4 sm:p-6 rounded-lg w-full max-w-xs sm:max-w-lg md:max-w-2xl relative overflow-y-auto max-h-[90vh] shadow-xl animate-fadeIn">
               <button
                 onClick={closeModal}
                 aria-label="Close"
