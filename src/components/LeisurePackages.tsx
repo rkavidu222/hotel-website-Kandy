@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, X } from 'lucide-react';
 
 type Package = {
   id: number;
@@ -7,11 +8,12 @@ type Package = {
   description: string;
   images: string[];
   activities: string[];
-  contactInfo: {
-    phone: string;
-    email: string;
-    location: string;
-  };
+};
+
+const commonContact = {
+  phone: '0775677560',
+  email: 'reservations@villavajrapani.com',
+  location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
 };
 
 const packages: Package[] = [
@@ -19,8 +21,7 @@ const packages: Package[] = [
     id: 1,
     title: 'Connect with Nature',
     duration: '2 Days',
-    description:
-      'A short but immersive experience to connect with the natural world through guided activities.',
+    description: 'Immerse yourself in the serenity of nature with guided hikes and forest bathing experiences.',
     images: [
       'https://i.redd.it/vla6t4e70n471.jpg',
       'https://srilankanexpeditions.co.uk/images/main_slider/interests/bird-watching-in-sri-lanka/01.jpg',
@@ -31,18 +32,12 @@ const packages: Package[] = [
       'Night: Sky gazing experience',
       'Day 2: Katusukonda hike and forest bathing',
     ],
-    contactInfo: {
-      phone: '+94 123 456 789',
-      email: 'connect@nature.com',
-      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
-    },
   },
   {
     id: 2,
     title: 'In Harmony with Nature',
     duration: '3 Days',
-    description:
-      'Deepen your connection with nature through extended exploration and mindful experiences.',
+    description: 'Deepen your connection with nature through extended exploration and mindful experiences.',
     images: [
       'https://www.hoteltreeoflife.com/wp-content/uploads/2021/05/peacock.png',
       'https://lk.lakpura.com/cdn/shop/products/LK74171100-05-E-1280-720.jpg?v=1620049034&width=1445',
@@ -53,18 +48,12 @@ const packages: Package[] = [
       'Day 2: Forest bathing and Hanthana hike',
       'Day 3: Vajrapani garden experience - blending with nature',
     ],
-    contactInfo: {
-      phone: '+94 987 654 321',
-      email: 'harmony@nature.com',
-      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
-    },
   },
   {
     id: 3,
     title: 'Mind-Body Challenge',
     duration: '3 Days',
-    description:
-      'Push your boundaries while exploring historic tea estates and breathtaking landscapes.',
+    description: 'Push your boundaries while exploring historic tea estates and breathtaking landscapes.',
     images: [
       'https://pearlbaytravels.com/wp-content/uploads/2024/09/pedro-tea-estate.jpg',
       'https://in.lakpura.com/cdn/shop/products/LK60170800-01-E-1280-720.jpg?v=1620047711',
@@ -75,18 +64,12 @@ const packages: Package[] = [
       'Day 2: Tea experience - tea plucking, processing, and tea factory tour',
       'Day 3: Tour to Ambuluwawa',
     ],
-    contactInfo: {
-      phone: '+94 456 789 012',
-      email: 'mindbody@challenge.com',
-      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
-    },
   },
   {
     id: 4,
     title: 'Photography and Bird Watching Tour',
     duration: '2 Days',
-    description:
-      'Capture the beauty of Vajrapani gardens and the Hanthana mountain range through your lens.',
+    description: 'Capture the beauty of Vajrapani gardens and the Hanthana mountain range through your lens.',
     images: [
       'https://img.freepik.com/premium-photo/woman-straw-hat-taking-photo-flowers-garden_1346134-17500.jpg',
       'https://images.stockcake.com/public/5/2/f/52fff216-5426-44e7-897d-40d4f41a98cd_large/birdwatching-in-nature-stockcake.jpg',
@@ -96,31 +79,26 @@ const packages: Package[] = [
       'Day 1: Guided photography sessions in Vajrapani garden',
       'Day 2: Bird watching and landscape photography in the Hanthana mountain range',
     ],
-    contactInfo: {
-      phone: '+94 789 123 456',
-      email: 'photography@tour.com',
-      location: '40/1 Galouawatta, Upland, Peradeniya, 20000 Kandy, Sri Lanka',
-    },
   },
 ];
 
-// ✅ Image Carousel component
 const ImageCarousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // show each image for 3 seconds
+    }, 4000);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div className="image-carousel">
+    <div className="relative h-64 w-full rounded-xl overflow-hidden shadow-lg">
       {images.map((img, index) => (
         <div
           key={index}
-          className={`image-slide ${index === currentIndex ? 'active' : ''}`}
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentIndex ? 'opacity-100 z-10' : 'opacity-0'
+          }`}
           style={{ backgroundImage: `url(${img})` }}
         />
       ))}
@@ -129,55 +107,42 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
 };
 
 export const LeisurePackages = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
-    <section id="packages" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="packages" className="py-24 bg-gradient-to-br from-white to-emerald-50">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-semibold text-emerald-800">Our Leisure Packages</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Explore unique and immersive journeys into nature and wellness. Each package is thoughtfully crafted.
+          <h2 className="text-5xl font-extrabold text-emerald-800 tracking-tight">Leisure Packages</h2>
+          <p className="text-gray-600 mt-4 text-lg">
+            Discover exclusive nature-infused experiences designed to rejuvenate your mind and body.
           </p>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-20">
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
-              className={`flex flex-col md:flex-row items-start ${
+              className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              } gap-10 package-card`}
+              } items-center gap-10 bg-white/60 backdrop-blur-sm shadow-md rounded-2xl p-6 hover:shadow-xl transition duration-300`}
             >
-              {/* Image Carousel */}
-              <div className="md:w-1/2 w-full relative overflow-hidden">
+              <div className="md:w-1/2 w-full">
                 <ImageCarousel images={pkg.images} />
               </div>
-
-              {/* Content */}
-              <div className="md:w-1/2 w-full">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">{pkg.title}</h3>
-                <p className="text-sm text-emerald-600 font-medium mb-3">{pkg.duration}</p>
-                <p className="text-gray-700 mb-5">{pkg.description}</p>
-
-                <h4 className="font-medium text-gray-800 mb-2">Itinerary</h4>
-                <ul className="list-disc list-inside text-gray-600 mb-4 space-y-1">
-                  {pkg.activities.map((activity, i) => (
-                    <li key={i}>{activity}</li>
+              <div className="md:w-1/2 w-full text-gray-800">
+                <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
+                <p className="text-emerald-600 text-sm mb-3 font-medium">{pkg.duration}</p>
+                <p className="mb-4">{pkg.description}</p>
+                <ul className="list-disc list-inside mb-4 space-y-1 text-sm">
+                  {pkg.activities.map((a, i) => (
+                    <li key={i}>{a}</li>
                   ))}
                 </ul>
-
-                <div className="text-sm mb-6 space-y-1 text-gray-600">
-                  <p>
-                    <span className="font-medium text-emerald-700">Phone:</span> {pkg.contactInfo.phone}
-                  </p>
-                  <p>
-                    <span className="font-medium text-emerald-700">Email:</span> {pkg.contactInfo.email}
-                  </p>
-                  <p>
-                    <span className="font-medium text-emerald-700">Location:</span> {pkg.contactInfo.location}
-                  </p>
-                </div>
-
-                <button className="bg-emerald-700 text-white px-6 py-2 rounded hover:bg-emerald-800 transition">
+                <button
+                  onClick={() => setShowPopup(true)}
+                  className="bg-gradient-to-r from-emerald-600 to-green-500 text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition"
+                >
                   Book This Package
                 </button>
               </div>
@@ -185,50 +150,35 @@ export const LeisurePackages = () => {
           ))}
         </div>
       </div>
+
+      {/* Trendy Glassmorphic Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-2xl max-w-sm w-full relative text-gray-800">
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <h4 className="text-xl font-semibold text-emerald-800 mb-4">Contact Information</h4>
+            <div className="space-y-3 text-sm">
+              <p className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-emerald-600" />
+                <span>{commonContact.phone}</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-emerald-600" />
+                <span>{commonContact.email}</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
+                <span>{commonContact.location}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
-
-// CSS Injection
-const style = document.createElement('style');
-style.innerHTML = `
-  .package-card {
-    border-radius: 10px;
-    border: 2px solid #e0e0e0;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  }
-
-  .package-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .image-carousel {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  .image-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.7s ease-in-out;
-    z-index: 0;
-  }
-
-  .image-slide.active {
-    opacity: 1;
-    z-index: 1;
-  }
-`;
-document.head.appendChild(style);
