@@ -1,6 +1,20 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 export const About = () => {
-  return <section id="about" className="py-20 bg-stone-50">
+  const images = [
+    "https://i.postimg.cc/HsnbD5bf/162718709.jpg",
+    "https://i.postimg.cc/CKT8qQ9g/162718761.jpg",
+    "https://i.postimg.cc/DyS4YhTh/162718813.jpg",
+    "https://i.postimg.cc/kG18RXP1/162718729.jpg",
+    "https://i.postimg.cc/B6tJQqNQ/IMG-0897.jpg",
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
@@ -13,9 +27,25 @@ export const About = () => {
             a unique haven for relaxation and renewal.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src="https://cf.bstatic.com/xdata/images/hotel/max500/511787071.jpg?k=be66e457fa72837f8e0ce59aca478a47d58795ea8afb38f41bf5afcd381008da&o=" alt="Villa Vajrapani resort view" className="rounded-md shadow-lg object-cover h-full w-full" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-full">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              autoplay={{ delay: 3500 }}
+              pagination={{ clickable: true }}
+              loop
+              className="rounded-md shadow-lg"
+            >
+              {images.map((src, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={src}
+                    alt={`Resort view ${i + 1}`}
+                    className="w-full h-64 sm:h-80 md:h-[350px] object-cover rounded-md"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <div>
             <h3 className="text-2xl font-serif font-medium text-gray-900 mb-4">
@@ -50,5 +80,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

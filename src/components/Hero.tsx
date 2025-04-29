@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718807.jpg?k=4730ad7b1824d627782f1603c32bc94b38b6a784cbee77e779d21011990e152d&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718687.jpg?k=bd9b3dbef979521a833dbe7149c622d1ea1a5e21c837979a4c17b3f479a17be8&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718772.jpg?k=f0f9b03d125f1131955cbc8b30d8e3b12ec5b6f3cff23e46a77d3f05f682a2a8&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718762.jpg?k=57ea3b11d1a7685157d9f70f27fe3e79a1b95ca63c0f5a0f11c8e1cae747850e&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718843.jpg?k=3343760890ef3297f360f73ad51dd4a7942deebb4905fa68559ccdee7bd3e629&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718785.jpg?k=f6bda1a8b09e9715755edc23184e0a4a8a02de666f713b2073ba2044177fd340&o=&hp=1",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162718768.jpg?k=0528ad9a7809e00c21b6d5813ade982383e4fe4260f19f259bdf0e164193c1f5&o=&hp=1"
+  "https://i.postimg.cc/8zWJNbcn/162718807.jpg",
+  "https://i.postimg.cc/gcN3T4LV/162718687.jpg",
+  "https://i.postimg.cc/c4zwsHm6/162718738.jpg",
+  "https://i.postimg.cc/85wfxPcp/162718772.jpg",
+  "https://i.postimg.cc/QMQTkqrW/162718768.jpg",
+  "https://i.postimg.cc/DwbsmTj6/162718740-1.jpg",
+  "https://i.postimg.cc/yxYcN3t3/162718684.jpg"
 ];
 
 export const Hero = () => {
