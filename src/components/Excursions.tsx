@@ -2,27 +2,27 @@ import React from 'react';
 const excursions = [{
   title: 'Village Tour',
   description: 'Experience authentic Sri Lankan rural life and traditions.',
-  image: 'https://images.unsplash.com/photo-1582210449638-91b2e7825b02?q=80&w=800&auto=format&fit=crop'
+  image: 'https://img.freepik.com/free-photo/safari-casual-hipster-camping-off-morning_1253-1036.jpg?semt=ais_hybrid&w=740'
 }, {
   title: 'Tea Factory Tour',
   description: 'Discover the fascinating process of tea production from leaf to cup.',
-  image: 'https://images.unsplash.com/photo-1582126892906-5ba111a3d7e6?q=80&w=800&auto=format&fit=crop'
+  image: 'https://t4.ftcdn.net/jpg/08/56/67/87/360_F_856678714_cASYwLMKiHiu3Gny9AJnhFwA0TWzXT3m.jpg'
 }, {
   title: 'Bird Watching & Photography Tour',
   description: 'Spot exotic birds and capture stunning landscapes with expert guidance.',
-  image: 'https://images.unsplash.com/photo-1621494547944-5797d74ee2c9?q=80&w=800&auto=format&fit=crop'
+  image: 'https://www.shutterstock.com/image-photo/nature-photographer-photographing-birds-600nw-1040137813.jpg'
 }, {
   title: 'Peradeniya Botanical Garden Tour',
   description: "Explore one of Asia's most spectacular botanical gardens.",
-  image: 'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=800&auto=format&fit=crop'
+  image: 'https://media.istockphoto.com/id/635795812/photo/alley-of-palms-in-royal-botanic-gardens-kandy.jpg?s=612x612&w=0&k=20&c=eLJ9LdAU72Jf2a5UuU-OY7co1DYK7OenmBtTTphn1Hw='
 }, {
   title: 'Katusukonda Hike and Camping',
   description: 'Adventure through pristine forests and camp under the stars.',
-  image: 'https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?q=80&w=800&auto=format&fit=crop'
+  image: 'https://i.pinimg.com/736x/7c/69/6d/7c696dc16be99ac2335a14c2f8ae0613.jpg'
 }, {
   title: 'Kandy City Tour',
   description: 'Visit the cultural capital of Sri Lanka with its rich heritage sites.',
-  image: 'https://images.unsplash.com/photo-1578168109644-231b538f638f?q=80&w=800&auto=format&fit=crop'
+  image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/e0/8e/9e.jpg'
 }, {
   title: 'Temple Tours',
   description: 'Discover Ambuluwawa, Embekke and Gadaladeniya temples.',
