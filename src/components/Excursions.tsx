@@ -170,7 +170,7 @@ export const Excursions = () => {
               <button
                 onClick={closeModal}
                 aria-label="Close"
-                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl font-bold z-10"
+                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl font-bold"
               >
                 ×
               </button>
@@ -188,13 +188,13 @@ export const Excursions = () => {
                 ))}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow z-10"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
                 >
                   ‹
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow z-10"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
                 >
                   ›
                 </button>
@@ -210,3 +210,4 @@ export const Excursions = () => {
     </section>
   );
 };
+   
