@@ -11,6 +11,7 @@ export const About = () => {
     "https://i.postimg.cc/DyS4YhTh/162718813.jpg",
     "https://i.postimg.cc/kG18RXP1/162718729.jpg",
     "https://i.postimg.cc/B6tJQqNQ/IMG-0897.jpg",
+    "https://i.postimg.cc/s2x219gr/IMG-1008.jpg",
   ];
 
   return (
