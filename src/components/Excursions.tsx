@@ -144,13 +144,13 @@ export const Excursions = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-serif font-medium text-xl mb-2">{excursion.title}</h3>
-                <p className="text-gray-600 mb-4">{excursion.description}</p>
+                <p className="text-gray-600 mb-4 text-sm">{excursion.description}</p>
                 <button
                   onClick={() => {
                     setSelectedExcursion(excursion);
                     setCurrentIndex(0);
                   }}
-                  className="text-emerald-800 font-medium flex items-center group-hover:underline"
+                  className="text-emerald-800 font-medium flex items-center group-hover:underline text-sm"
                 >
                   Learn more
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ export const Excursions = () => {
       {selectedExcursion &&
         createPortal(
           <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-hidden shadow-xl">
+            <div className="bg-white p-4 rounded-lg max-w-xl w-full relative overflow-hidden shadow-xl">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -175,7 +175,7 @@ export const Excursions = () => {
                 ×
               </button>
 
-              <div className="relative h-64 rounded overflow-hidden mb-4">
+              <div className="relative h-56 rounded overflow-hidden mb-4">
                 {selectedExcursion.images.map((img, i) => (
                   <img
                     key={i}
@@ -201,8 +201,8 @@ export const Excursions = () => {
               </div>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{selectedExcursion.title}</h3>
-              <p className="text-gray-700 mb-2">{selectedExcursion.details}</p>
-              <p className="text-gray-600 text-sm">{selectedExcursion.moreDetails}</p>
+              <p className="text-gray-700 mb-2 text-sm">{selectedExcursion.details}</p>
+              <p className="text-gray-600 text-xs">{selectedExcursion.moreDetails}</p>
             </div>
           </div>,
           document.body
