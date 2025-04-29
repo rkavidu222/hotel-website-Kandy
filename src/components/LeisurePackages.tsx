@@ -104,6 +104,30 @@ const packages: Package[] = [
   },
 ];
 
+// ✅ Image Carousel component
+const ImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000); // show each image for 3 seconds
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="image-carousel">
+      {images.map((img, index) => (
+        <div
+          key={index}
+          className={`image-slide ${index === currentIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${img})` }}
+        />
+      ))}
+    </div>
+  );
+};
+
 export const LeisurePackages = () => {
   return (
     <section id="packages" className="py-20 bg-white">
@@ -123,17 +147,9 @@ export const LeisurePackages = () => {
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
               } gap-10 package-card`}
             >
-              {/* Images Gallery with Auto Animation */}
+              {/* Image Carousel */}
               <div className="md:w-1/2 w-full relative overflow-hidden">
-                <div className="image-carousel">
-                  {pkg.images.map((img, i) => (
-                    <div
-                      key={i}
-                      className="image-slide"
-                      style={{ backgroundImage: `url(${img})` }}
-                    />
-                  ))}
-                </div>
+                <ImageCarousel images={pkg.images} />
               </div>
 
               {/* Content */}
@@ -151,16 +167,13 @@ export const LeisurePackages = () => {
 
                 <div className="text-sm mb-6 space-y-1 text-gray-600">
                   <p>
-                    <span className="font-medium text-emerald-700">Phone:</span>{' '}
-                    {pkg.contactInfo.phone}
+                    <span className="font-medium text-emerald-700">Phone:</span> {pkg.contactInfo.phone}
                   </p>
                   <p>
-                    <span className="font-medium text-emerald-700">Email:</span>{' '}
-                    {pkg.contactInfo.email}
+                    <span className="font-medium text-emerald-700">Email:</span> {pkg.contactInfo.email}
                   </p>
                   <p>
-                    <span className="font-medium text-emerald-700">Location:</span>{' '}
-                    {pkg.contactInfo.location}
+                    <span className="font-medium text-emerald-700">Location:</span> {pkg.contactInfo.location}
                   </p>
                 </div>
 
@@ -176,7 +189,7 @@ export const LeisurePackages = () => {
   );
 };
 
-// Add the keyframes for the image carousel animation
+// CSS Injection
 const style = document.createElement('style');
 style.innerHTML = `
   .package-card {
@@ -209,28 +222,13 @@ style.innerHTML = `
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
+    z-index: 0;
   }
 
-  .image-carousel .image-slide:nth-child(1) {
-    animation: fade-in-out 15s infinite 0s;
-  }
-
-  .image-carousel .image-slide:nth-child(2) {
-    animation: fade-in-out 15s infinite 5s;
-  }
-
-  .image-carousel .image-slide:nth-child(3) {
-    animation: fade-in-out 15s infinite 10s;
-  }
-
-  @keyframes fade-in-out {
-    0%, 100% {
-      opacity: 0;
-    }
-    10%, 90% {
-      opacity: 1;
-    }
+  .image-slide.active {
+    opacity: 1;
+    z-index: 1;
   }
 `;
 document.head.appendChild(style);
