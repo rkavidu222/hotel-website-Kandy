@@ -22,11 +22,11 @@ const excursions = [{
 }, {
   title: 'Kandy City Tour',
   description: 'Visit the cultural capital of Sri Lanka with its rich heritage sites.',
-  image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/e0/8e/9e.jpg'
+  image: 'https://media.tacdn.com/media/attractions-splice-spp-674x446/09/29/a9/bc.jpg'
 }, {
   title: 'Temple Tours',
   description: 'Discover Ambuluwawa, Embekke and Gadaladeniya temples.',
-  image: 'https://images.unsplash.com/photo-1564509027875-ba1c0c08158a?q=80&w=800&auto=format&fit=crop'
+  image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/e0/8e/9e.jpg'
 }];
 export const Excursions = () => {
   return <section id="excursions" className="py-20 bg-stone-100">
