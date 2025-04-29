@@ -72,7 +72,7 @@ const excursions: Excursion[] = [
     moreDetails: 'Includes entrance tickets, cultural performance seats, and guide. Perfect for first-time visitors.',
     images: [
       'https://media.tacdn.com/media/attractions-splice-spp-674x446/09/29/a9/bc.jpg',
-      'https://images.unsplash.com/photo-1626091022888-485eb96c494a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2FuZHl8ZW58MHx8MHx8fDA%3D',
+      'https://images.unsplash.com/photo-1626091022888-485eb96c494a?fm=jpg&q=60&w=3000',
       'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/kandy-sri-lanka-laughingmango.jpg',
     ]
   },
@@ -154,7 +154,7 @@ export const Excursions = () => {
                 >
                   Learn more
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
@@ -166,10 +166,11 @@ export const Excursions = () => {
       {selectedExcursion &&
         createPortal(
           <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-hidden">
+            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-hidden shadow-xl">
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-xl font-bold"
+                aria-label="Close"
+                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl font-bold"
               >
                 ×
               </button>
@@ -179,21 +180,21 @@ export const Excursions = () => {
                   <img
                     key={i}
                     src={img}
-                    alt={`${selectedExcursion.title} ${i}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                    alt={`${selectedExcursion.title} image ${i + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
                       i === currentIndex ? 'opacity-100' : 'opacity-0'
                     }`}
                   />
                 ))}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
                 >
                   ‹
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
                 >
                   ›
                 </button>
