@@ -165,8 +165,8 @@ export const Excursions = () => {
 
       {selectedExcursion &&
         createPortal(
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4">
-            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-y-auto max-h-[90vh] shadow-xl">
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-2 sm:px-4">
+            <div className="bg-white p-4 sm:p-6 rounded-lg w-full max-w-xs sm:max-w-lg md:max-w-2xl relative overflow-y-auto max-h-[90vh] shadow-xl">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -175,7 +175,7 @@ export const Excursions = () => {
                 ×
               </button>
 
-              <div className="relative h-64 sm:h-72 md:h-80 rounded overflow-hidden mb-4">
+              <div className="relative h-52 sm:h-64 md:h-72 rounded overflow-hidden mb-4">
                 {selectedExcursion.images.map((img, i) => (
                   <img
                     key={i}
@@ -188,21 +188,21 @@ export const Excursions = () => {
                 ))}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 hover:bg-white shadow"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow text-lg"
                 >
                   ‹
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 hover:bg-white shadow"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow text-lg"
                 >
                   ›
                 </button>
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{selectedExcursion.title}</h3>
-              <p className="text-gray-700 mb-2">{selectedExcursion.details}</p>
-              <p className="text-gray-600 text-sm">{selectedExcursion.moreDetails}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{selectedExcursion.title}</h3>
+              <p className="text-gray-700 text-sm sm:text-base mb-2">{selectedExcursion.details}</p>
+              <p className="text-gray-600 text-xs sm:text-sm">{selectedExcursion.moreDetails}</p>
             </div>
           </div>,
           document.body
