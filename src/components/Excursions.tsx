@@ -92,6 +92,11 @@ const excursions: Excursion[] = [
 export const Excursions = () => {
   const [selectedExcursion, setSelectedExcursion] = useState<Excursion | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isClient, setIsClient] = useState(false); // Prevent hydration mismatch
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (!selectedExcursion) return;
@@ -163,7 +168,7 @@ export const Excursions = () => {
         </div>
       </div>
 
-      {selectedExcursion &&
+      {isClient && selectedExcursion &&
         createPortal(
           <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-hidden shadow-xl">
@@ -181,9 +186,7 @@ export const Excursions = () => {
                     key={i}
                     src={img}
                     alt={`${selectedExcursion.title} image ${i + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
-                      i === currentIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${i === currentIndex ? 'opacity-100' : 'opacity-0'}`}
                   />
                 ))}
                 <button
