@@ -124,7 +124,7 @@ export const Excursions = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">Excursions</h2>
           <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6" />
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             Explore the natural beauty and cultural heritage surrounding Villa Vajrapani.
           </p>
         </div>
@@ -135,7 +135,7 @@ export const Excursions = () => {
               key={index}
               className="group bg-white rounded-md overflow-hidden shadow-md transition-transform hover:-translate-y-1"
             >
-              <div className="h-56 overflow-hidden">
+              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img
                   src={excursion.images[0]}
                   alt={excursion.title}
@@ -144,7 +144,7 @@ export const Excursions = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-serif font-medium text-xl mb-2">{excursion.title}</h3>
-                <p className="text-gray-600 mb-4">{excursion.description}</p>
+                <p className="text-gray-600 text-sm sm:text-base mb-4">{excursion.description}</p>
                 <button
                   onClick={() => {
                     setSelectedExcursion(excursion);
@@ -165,8 +165,8 @@ export const Excursions = () => {
 
       {selectedExcursion &&
         createPortal(
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-hidden shadow-xl">
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4">
+            <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative overflow-y-auto max-h-[90vh] shadow-xl">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -175,7 +175,7 @@ export const Excursions = () => {
                 ×
               </button>
 
-              <div className="relative h-64 rounded overflow-hidden mb-4">
+              <div className="relative h-64 sm:h-72 md:h-80 rounded overflow-hidden mb-4">
                 {selectedExcursion.images.map((img, i) => (
                   <img
                     key={i}
@@ -188,13 +188,13 @@ export const Excursions = () => {
                 ))}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 hover:bg-white shadow"
                 >
                   ‹
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white shadow"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 hover:bg-white shadow"
                 >
                   ›
                 </button>
