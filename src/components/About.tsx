@@ -6,12 +6,12 @@ import 'swiper/css/pagination';
 
 export const About = () => {
   const images = [
-    "src/Images/a1.jpg",
-    "src/Images/a2.jpg",
-    "src/Images/a3.jpg",
-    "src/Images/a4.jpg",
-    "src/Images/a5.jpeg",
-    "src/Images/a6.jpeg",
+    "/Images/a1.jpg",
+    "/Images/a2.jpg",
+    "/Images/a3.jpg",
+    "/Images/a4.jpg",
+    "/Images/a5.jpeg",
+    "/Images/a6.jpeg",
   ];
 
   return (

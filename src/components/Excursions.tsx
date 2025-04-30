@@ -16,9 +16,9 @@ const excursions: Excursion[] = [
     details: 'Visit a traditional village, interact with locals, learn how to cook local cuisine, and enjoy a bullock cart ride.',
     moreDetails: 'You’ll witness daily rural routines, traditional farming techniques, and enjoy a home-cooked lunch. Great for families and cultural explorers.',
     images: [
-      'src/Images/e1.JPG',
-      'src/Images/e2.JPG',
-      'src/Images/e3.JPG',
+      '/Images/e1.JPG',
+      '/Images/e2.JPG',
+      '/Images/e3.JPG',
     ]
   },
   {
@@ -27,9 +27,9 @@ const excursions: Excursion[] = [
     details: 'Tour a working tea factory, observe leaf processing, taste fresh Ceylon tea, and explore tea fields.',
     moreDetails: 'You’ll learn about tea grading, export processes, and get a souvenir pack of Ceylon tea. Ideal for tea lovers and photographers.',
     images: [
-      'src/Images/e4.JPG',
-      'src/Images/e5.jfif',
-      'src/Images/e6.JPG',
+      '/Images/e4.JPG',
+      '/Images/e5.jfif',
+      '/Images/e6.JPG',
     ]
   },
   {
@@ -38,9 +38,9 @@ const excursions: Excursion[] = [
     details: 'Guided by naturalists, this tour offers ideal spots for birdwatching and nature photography around Vajrapani.',
     moreDetails: 'Perfect for early risers and photographers. Bring your own binoculars and gear, or rent on-site. Ideal for nature enthusiasts.',
     images: [
-      'src/Images/e7.JPG',
-      'src/Images/e8.JPG',
-      'src/Images/e9.JPG',
+      '/Images/e7.JPG',
+      '/Images/e8.JPG',
+      '/Images/e9.JPG',
     ]
   },
   {
@@ -49,9 +49,9 @@ const excursions: Excursion[] = [
     details: 'Stroll through orchid houses, palm avenues, and spice gardens in Peradeniya.',
     moreDetails: 'This leisurely tour includes a guided walk and optional golf cart rental. Ideal for all ages.',
     images: [
-      'src/Images/e10.JPG',
-      'src/Images/e11.JPG',
-      'src/Images/e12.JPG',
+      '/Images/e10.JPG',
+      '/Images/e11.JPG',
+      '/Images/e12.JPG',
     ]
   },
   {
@@ -60,9 +60,9 @@ const excursions: Excursion[] = [
     details: 'Trek to the scenic Katusukonda mountain and enjoy a night of camping with views.',
     moreDetails: 'Includes tents, meals, and a campfire under the stars. Great for hikers and groups.',
     images: [
-      'src/Images/e13.JPG',
-      'src/Images/e14.JPG',
-      'src/Images/e15.JPG',
+      '/Images/e13.JPG',
+      '/Images/e14.JPG',
+      '/Images/e15.JPG',
     ]
   },
   {
@@ -71,9 +71,9 @@ const excursions: Excursion[] = [
     details: 'Explore the Temple of the Tooth, Kandy Lake, cultural shows, and shopping streets.',
     moreDetails: 'Includes entrance tickets, cultural performance seats, and guide. Perfect for first-time visitors.',
     images: [
-     'src/Images/e16.JPEG',
-      'src/Images/e17.jfif',
-      'src/Images/e18.JPG',
+      '/Images/e16.JPEG',
+      '/Images/e17.jfif',
+      '/Images/e18.JPG',
     ]
   },
   {
@@ -82,9 +82,9 @@ const excursions: Excursion[] = [
     details: 'Tour historical and religious temple sites nestled in the hills of central Sri Lanka.',
     moreDetails: 'A peaceful experience with spiritual guides and historical context. Best done in the morning.',
     images: [
-      'src/Images/e19.JPG',
-      'src/Images/e20.JPG',
-      'src/Images/e21.JPG',
+      '/Images/e19.JPG',
+      '/Images/e20.JPG',
+      '/Images/e21.JPG',
     ]
   },
 ];
@@ -92,7 +92,7 @@ const excursions: Excursion[] = [
 export const Excursions = () => {
   const [selectedExcursion, setSelectedExcursion] = useState<Excursion | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isClient, setIsClient] = useState(false); // Prevent hydration mismatch
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
