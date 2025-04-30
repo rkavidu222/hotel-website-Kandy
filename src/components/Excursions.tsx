@@ -16,9 +16,9 @@ const excursions: Excursion[] = [
     details: 'Visit a traditional village, interact with locals, learn how to cook local cuisine, and enjoy a bullock cart ride.',
     moreDetails: 'You’ll witness daily rural routines, traditional farming techniques, and enjoy a home-cooked lunch. Great for families and cultural explorers.',
     images: [
-      'https://img.freepik.com/free-photo/safari-casual-hipster-camping-off-morning_1253-1036.jpg',
-      'https://img.freepik.com/free-photo/couple-path-bamboo-forest_23-2147637662.jpg',
-      'https://img.freepik.com/free-photo/group-hikers-standing-footpath_23-2147950694.jpg',
+      'src/Images/e1.JPG',
+      'src/Images/e2.JPG',
+      'src/Images/e3.JPG',
     ]
   },
   {
@@ -27,9 +27,9 @@ const excursions: Excursion[] = [
     details: 'Tour a working tea factory, observe leaf processing, taste fresh Ceylon tea, and explore tea fields.',
     moreDetails: 'You’ll learn about tea grading, export processes, and get a souvenir pack of Ceylon tea. Ideal for tea lovers and photographers.',
     images: [
-      'https://img.freepik.com/free-photo/tea-picker-harvesting-tea-leaves_53876-47059.jpg',
-      'https://images.unsplash.com/photo-1701544872167-7f5ee73cb435',
-      'https://t3.ftcdn.net/jpg/00/80/71/78/360_F_80717866_KlL2dJT1CazArCsdPcH74sAeLMyOELEP.jpg',
+      'src/Images/e4.JPG',
+      'src/Images/e5.jfif',
+      'src/Images/e6.JPG',
     ]
   },
   {
@@ -38,9 +38,9 @@ const excursions: Excursion[] = [
     details: 'Guided by naturalists, this tour offers ideal spots for birdwatching and nature photography around Vajrapani.',
     moreDetails: 'Perfect for early risers and photographers. Bring your own binoculars and gear, or rent on-site. Ideal for nature enthusiasts.',
     images: [
-      'https://www.shutterstock.com/image-photo/nature-photographer-photographing-birds-600nw-1040137813.jpg',
-      'https://www.shutterstock.com/image-photo/child-learning-take-photos-kid-600nw-2495152737.jpg',
-      'https://www.shutterstock.com/image-photo/family-watching-greater-flamingo-phoenicopterus-600nw-2580944381.jpg',
+      'src/Images/e7.JPG',
+      'src/Images/e8.JPG',
+      'src/Images/e9.JPG',
     ]
   },
   {
@@ -49,9 +49,9 @@ const excursions: Excursion[] = [
     details: 'Stroll through orchid houses, palm avenues, and spice gardens in Peradeniya.',
     moreDetails: 'This leisurely tour includes a guided walk and optional golf cart rental. Ideal for all ages.',
     images: [
-      'https://img.freepik.com/free-photo/garden-flowers-mae-fah-luang-garden-locate-doi-tung-chiang-rai-thailand_335224-968.jpg?t=st=1745991732~exp=1745995332~hmac=99f35b0ee40d8c12bc8c1d945e5c67070475a1890053cb2e8f8d7c4d60bfd21c&w=996',
-      'https://www.botanicgardens.gov.lk/wp-content/uploads/2021/03/Haggala-Main-Img.jpg',
-      'https://media.istockphoto.com/id/997791056/photo/peradeniya-royal-botanical-garden-kandy-sri-lanka.jpg?s=170667a&w=0&k=20&c=wjwfPZyPD8vxAaxhRVRy-9IhurptuwDXkZ7EYs41XEk=',
+      'src/Images/e10.JPG',
+      'src/Images/e11.JPG',
+      'src/Images/e12.JPG',
     ]
   },
   {
@@ -60,9 +60,9 @@ const excursions: Excursion[] = [
     details: 'Trek to the scenic Katusukonda mountain and enjoy a night of camping with views.',
     moreDetails: 'Includes tents, meals, and a campfire under the stars. Great for hikers and groups.',
     images: [
-      'https://i.pinimg.com/736x/7c/69/6d/7c696dc16be99ac2335a14c2f8ae0613.jpg',
-      'https://www.shutterstock.com/image-photo/top-view-katusu-konda-maountain-600nw-1635435145.jpg',
-      'https://media.istockphoto.com/id/1188628428/photo/drone-landscape-view-of-katusu-konda-edge-and-uragala-peak-at-hanthana-mountain-range-kandy.jpg?s=170667a&w=0&k=20&c=TEg2CHVLxKq2I601RtEm4zDmLkM8qfLR0DMFZgLANpI=',
+      'src/Images/e13.JPG',
+      'src/Images/e14.JPG',
+      'src/Images/e15.JPG',
     ]
   },
   {
@@ -71,9 +71,9 @@ const excursions: Excursion[] = [
     details: 'Explore the Temple of the Tooth, Kandy Lake, cultural shows, and shopping streets.',
     moreDetails: 'Includes entrance tickets, cultural performance seats, and guide. Perfect for first-time visitors.',
     images: [
-      'https://media.tacdn.com/media/attractions-splice-spp-674x446/09/29/a9/bc.jpg',
-      'https://images.unsplash.com/photo-1626091022888-485eb96c494a?fm=jpg&q=60&w=3000',
-      'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/kandy-sri-lanka-laughingmango.jpg',
+     'src/Images/e16.JPEG',
+      'src/Images/e17.jfif',
+      'src/Images/e18.JPG',
     ]
   },
   {
@@ -82,9 +82,9 @@ const excursions: Excursion[] = [
     details: 'Tour historical and religious temple sites nestled in the hills of central Sri Lanka.',
     moreDetails: 'A peaceful experience with spiritual guides and historical context. Best done in the morning.',
     images: [
-      'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/e0/8e/9e.jpg',
-      'https://www.shutterstock.com/image-photo/kandy-sri-lanka-april-10th-600nw-1437447995.jpg',
-      'https://t3.ftcdn.net/jpg/05/44/36/12/360_F_544361215_LHJFIAjhMUSseI3zC7txLhgIIC7c4CY1.jpg',
+      'src/Images/e19.JPG',
+      'src/Images/e20.JPG',
+      'src/Images/e21.JPG',
     ]
   },
 ];
