@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, X } from 'lucide-react';
 
@@ -23,9 +25,9 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'Immerse yourself in the serenity of nature with guided hikes and forest bathing experiences.',
     images: [
-      'https://i.redd.it/vla6t4e70n471.jpg',
-      'https://srilankanexpeditions.co.uk/images/main_slider/interests/bird-watching-in-sri-lanka/01.jpg',
-      'https://www.kitulgalaadventures.com/images/kitulgala-activities/rain-forest-trails/rain-forest-05.jpg',
+      '/images/p1.jpg',
+      '/images/p2.jpg',
+      '/images/p3.jpg',
     ],
     activities: [
       'Day 1: Meet and greet, rest, bird watching tour',
@@ -39,9 +41,9 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Deepen your connection with nature through extended exploration and mindful experiences.',
     images: [
-      'https://img.freepik.com/premium-photo/olive-backed-sunbirds-feeding-child_188878-54.jpg?w=996',
-      'https://lk.lakpura.com/cdn/shop/products/LK74171100-05-E-1280-720.jpg?v=1620049034&width=1445',
-      'https://i.postimg.cc/gcN3T4LV/162718687.jpg',
+      '/images/p4.jpg',
+      '/images/p5.jpg',
+      '/images/p6.jpg',
     ],
     activities: [
       'Day 1: Meet and greet, evening bird watching tour',
@@ -55,9 +57,9 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Push your boundaries while exploring historic tea estates and breathtaking landscapes.',
     images: [
-      'https://pearlbaytravels.com/wp-content/uploads/2024/09/pedro-tea-estate.jpg',
-      'https://in.lakpura.com/cdn/shop/products/LK60170800-01-E-1280-720.jpg?v=1620047711',
-      'https://media.istockphoto.com/id/934538578/photo/beautiful-asian-woman-harvest-tea-leaves-in-tea-field-in-the-morning.jpg?s=612x612&w=0&k=20&c=ObpTtXwiqP3fzE-_6xUorPd027KbrE3i3WYX07jTRBY=',
+      '/images/p7.jpg',
+      '/images/p8.jpeg',
+      '/images/p9.jpg',
     ],
     activities: [
       'Day 1: Cross Katusukonda hike to enter Pekoe trail stage one, visit first tea estate of Sri Lanka',
@@ -71,9 +73,9 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'Capture the beauty of Vajrapani gardens and the Hanthana mountain range through your lens.',
     images: [
-      'https://img.freepik.com/premium-photo/woman-straw-hat-taking-photo-flowers-garden_1346134-17500.jpg',
-      'https://images.stockcake.com/public/5/2/f/52fff216-5426-44e7-897d-40d4f41a98cd_large/birdwatching-in-nature-stockcake.jpg',
-      'https://media.istockphoto.com/id/1315463358/photo/male-streak-backed-oriole-on-a-thorny-stick.jpg?s=612x612&w=0&k=20&c=YB60E-0NqbvBl7irhBB8EeYmFMgmn147q3EI3wR0Kgo=',
+      '/images/p10.JPG',
+      '/images/p11.JPG',
+      '/images/p12.jpg',
     ],
     activities: [
       'Day 1: Guided photography sessions in Vajrapani garden',
@@ -186,3 +188,4 @@ export const LeisurePackages = () => {
     </section>
   );
 };
+

@@ -1,13 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  "https://i.postimg.cc/8zWJNbcn/162718807.jpg",
-  "https://i.postimg.cc/gcN3T4LV/162718687.jpg",
-  "https://i.postimg.cc/c4zwsHm6/162718738.jpg",
-  "https://i.postimg.cc/85wfxPcp/162718772.jpg",
-  "https://i.postimg.cc/QMQTkqrW/162718768.jpg",
-  "https://i.postimg.cc/DwbsmTj6/162718740-1.jpg",
-  "https://i.postimg.cc/yxYcN3t3/162718684.jpg"
+  '/images/h1.jpg',
+  '/images/h2.jpg',
+  '/images/h3.jpg',
+  '/images/h4.jpg',
+  '/images/h5.jpg',
+  '/images/h6.jpg',
+  '/images/h7.jpg',
 ];
 
 export const Hero = () => {
