@@ -92,7 +92,7 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
   }, [images.length]);
 
   return (
-    <div className="relative h-64 w-full rounded-xl overflow-hidden shadow-lg">
+    <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
       {images.map((img, index) => (
         <div
           key={index}
@@ -125,7 +125,7 @@ export const LeisurePackages = () => {
               key={pkg.id}
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              } items-center gap-10 bg-white/60 backdrop-blur-sm shadow-md rounded-2xl p-6 hover:shadow-xl transition duration-300`}
+              } items-center gap-10 bg-white/60 backdrop-blur-sm shadow-md rounded-2xl p-8 min-h-[500px] hover:shadow-xl transition duration-300`}
             >
               <div className="md:w-1/2 w-full">
                 <ImageCarousel images={pkg.images} />
@@ -151,7 +151,6 @@ export const LeisurePackages = () => {
         </div>
       </div>
 
-      {/* Trendy Glassmorphic Popup */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
           <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-2xl max-w-sm w-full relative text-gray-800">

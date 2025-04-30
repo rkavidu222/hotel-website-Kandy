@@ -49,7 +49,7 @@ const excursions: Excursion[] = [
     details: 'Stroll through orchid houses, palm avenues, and spice gardens in Peradeniya.',
     moreDetails: 'This leisurely tour includes a guided walk and optional golf cart rental. Ideal for all ages.',
     images: [
-      'https://media-cdn.tripadvisor.com/media/photo-s/0e/b5/09/26/photo3jpg.jpg',
+      'https://img.freepik.com/free-photo/garden-flowers-mae-fah-luang-garden-locate-doi-tung-chiang-rai-thailand_335224-968.jpg?t=st=1745991732~exp=1745995332~hmac=99f35b0ee40d8c12bc8c1d945e5c67070475a1890053cb2e8f8d7c4d60bfd21c&w=996',
       'https://www.botanicgardens.gov.lk/wp-content/uploads/2021/03/Haggala-Main-Img.jpg',
       'https://media.istockphoto.com/id/997791056/photo/peradeniya-royal-botanical-garden-kandy-sri-lanka.jpg?s=170667a&w=0&k=20&c=wjwfPZyPD8vxAaxhRVRy-9IhurptuwDXkZ7EYs41XEk=',
     ]
