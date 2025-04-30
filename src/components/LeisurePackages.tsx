@@ -39,7 +39,7 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Deepen your connection with nature through extended exploration and mindful experiences.',
     images: [
-      'https://www.hoteltreeoflife.com/wp-content/uploads/2021/05/peacock.png',
+      'https://img.freepik.com/premium-photo/olive-backed-sunbirds-feeding-child_188878-54.jpg?w=996',
       'https://lk.lakpura.com/cdn/shop/products/LK74171100-05-E-1280-720.jpg?v=1620049034&width=1445',
       'https://i.postimg.cc/gcN3T4LV/162718687.jpg',
     ],
@@ -84,23 +84,30 @@ const packages: Package[] = [
 
 const ImageCarousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 4000);
+
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+    <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-xl shadow-lg">
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100 z-10' : 'opacity-0'
           }`}
-          style={{ backgroundImage: `url(${img})` }}
-        />
+        >
+          <img
+            src={img}
+            alt={`Package image ${index + 1}`}
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
       ))}
     </div>
   );
@@ -123,18 +130,16 @@ export const LeisurePackages = () => {
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
-              className={`flex flex-col md:flex-row ${
-                index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              } items-center gap-10 bg-white/60 backdrop-blur-sm shadow-md rounded-2xl p-8 min-h-[500px] hover:shadow-xl transition duration-300`}
+              className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} items-center gap-10 bg-white/60 backdrop-blur-sm shadow-md rounded-2xl p-6 md:p-8 min-h-[500px] hover:shadow-xl transition duration-300`}
             >
               <div className="md:w-1/2 w-full">
                 <ImageCarousel images={pkg.images} />
               </div>
               <div className="md:w-1/2 w-full text-gray-800">
-                <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                <p className="text-emerald-600 text-sm mb-3 font-medium">{pkg.duration}</p>
-                <p className="mb-4">{pkg.description}</p>
-                <ul className="list-disc list-inside mb-4 space-y-1 text-sm">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">{pkg.title}</h3>
+                <p className="text-emerald-600 text-sm md:text-base mb-3 font-medium">{pkg.duration}</p>
+                <p className="mb-4 text-sm md:text-base">{pkg.description}</p>
+                <ul className="list-disc list-inside mb-4 space-y-1 text-sm md:text-base">
                   {pkg.activities.map((a, i) => (
                     <li key={i}>{a}</li>
                   ))}
@@ -161,7 +166,7 @@ export const LeisurePackages = () => {
               <X className="w-5 h-5" />
             </button>
             <h4 className="text-xl font-semibold text-emerald-800 mb-4">Contact Information</h4>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-sm md:text-base">
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-emerald-600" />
                 <span>{commonContact.phone}</span>
