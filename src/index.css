@@ -1,3 +1,48 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+/* About Section */
+.about-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Optional: Animation for Room Section */
+  .room-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .room-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* adjust if your navbar is taller */
+  }
+  
+
+  
+
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+  
+  .hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .group-hover\:scale-105:hover {
+    transform: scale(1.05);
+  }

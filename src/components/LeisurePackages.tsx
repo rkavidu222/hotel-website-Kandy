@@ -120,9 +120,10 @@ export const LeisurePackages = () => {
 
   return (
     <section id="packages" className="py-24 bg-gradient-to-br from-white to-emerald-50">
+      <div className="my-16 w-full h-1 bg-emerald-500"></div>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-extrabold text-emerald-800 tracking-tight">Leisure Packages</h2>
+        <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">Leisure Packages</h2>
           <p className="text-gray-600 mt-4 text-lg">
             Discover exclusive nature-infused experiences designed to rejuvenate your mind and body.
           </p>

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { MenuIcon, XIcon, Phone, Mail, MapPin, X } from 'lucide-react';
+import { MenuIcon, XIcon, Phone, Mail, MapPin, X, ChevronDown } from 'lucide-react';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const contact = {
     phone: '0775677560',
     email: 'reservations@villavajrapani.com',
     location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
+  };
+
+  const handleLinkClick = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -25,19 +30,49 @@ export const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-8">
-                <a href="#home" className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
+                <a href="#home" onClick={handleLinkClick} className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
                   Home
                   <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="#about" className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
-                  About
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#packages" className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
+
+                <div className="relative">
+                  <button
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105 flex items-center"
+                  >
+                    About
+                    <ChevronDown
+                      size={16}
+                      className={`ml-2 transition-transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`}
+                    />
+                    <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
+                  </button>
+                  {isDropdownOpen && (
+                    <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg z-10 w-48">
+                      <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                        About Us
+                      </a>
+                      <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                        Our Rooms
+                      </a>
+                      <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                        Dining
+                      </a>
+                      <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                        Gallery
+                      </a>
+                      <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                        Meet Drogan
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <a href="#packages" onClick={handleLinkClick} className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
                   Leisure Packages
                   <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="#excursions" className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
+                <a href="#excursions" onClick={handleLinkClick} className="group text-gray-600 hover:text-emerald-800 transition-all relative text-sm font-medium transform hover:scale-105">
                   Excursions
                   <span className="absolute left-0 bottom-0 w-0 h-1 bg-emerald-800 group-hover:w-full transition-all duration-300"></span>
                 </a>
@@ -49,6 +84,8 @@ export const Navbar = () => {
                 </button>
               </div>
             </div>
+
+            {/* Mobile Menu Icon */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,16 +105,45 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white shadow-lg transform transition-transform duration-500 ease-in-out translate-x-0">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
+              <a href="#home" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
                 Home
               </a>
-              <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
-                About
-              </a>
-              <a href="#packages" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
+              <div className="relative">
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="block w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105 flex items-center"
+                >
+                  About
+                  <ChevronDown
+                    size={16}
+                    className={`ml-2 transition-transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`}
+                  />
+                </button>
+                {isDropdownOpen && (
+                  <div className="bg-white shadow-lg rounded-lg mt-2">
+                    <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                      About Us
+                    </a>
+                    <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                      Our Rooms
+                    </a>
+                    <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                      Dining
+                    </a>
+                    <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                      Gallery
+                    </a>
+                    <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
+                      Meet Drogan
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <a href="#packages" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
                 Leisure Packages
               </a>
-              <a href="#excursions" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
+              <a href="#excursions" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
                 Excursions
               </a>
               <button
@@ -94,7 +160,7 @@ export const Navbar = () => {
         )}
       </nav>
 
-      {/* Popup */}
+      {/* Contact Info Popup */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50">
           <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl max-w-sm w-full relative text-gray-800 animate-fadeIn">
