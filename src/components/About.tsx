@@ -257,8 +257,6 @@ export const About = () => {
         "/images/g8.jpeg",
         "/images/g9.jpg",
         "/images/g11.jpeg",
-        "/images/g13.jpg",
-        "/images/g14.jpeg",
         "/images/g15.jpg",
         "/images/g16.jpeg",
         "/images/g17.jpeg",
