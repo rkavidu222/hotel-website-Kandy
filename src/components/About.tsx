@@ -279,33 +279,17 @@ export const About = () => {
 
 {/* Meet Drogan - Beloved Mascot Layout */}
 
-
-
 <div id="ambassador-dog" className="py-20 bg-emerald-50 scroll-mt-28">
+<div className="text-center mb-12">
+    <h3 className="text-3xl font-serif font-medium text-gray-900">Meet Drogan</h3>
+    <div className="w-16 h-1 bg-emerald-800 mx-auto mt-2"></div>
+  </div>
+    
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {/* Left: Large Main Image with Mini Collage */}
-    <div className="grid grid-cols-2 gap-4">
-      <div className="col-span-2">
-        <img
-          src="/images/a1.jpg"
-          alt="Drogan posing"
-          className="w-full h-80 object-cover rounded-lg shadow-lg"
-        />
-      </div>
-      <img
-        src="/images/a2.jpg"
-        alt="Drogan smiling"
-        className="h-40 object-cover rounded-lg shadow"
-      />
-      <img
-        src="/images/a3.jpg"
-        alt="Drogan with guest"
-        className="h-40 object-cover rounded-lg shadow"
-      />
-    </div>
 
-    {/* Right: Content */}
-    <div>
+ 
+    {/* Right: Content (shown first on mobile) */}
+    <div className="order-1 md:order-2">
       <h3 className="text-4xl font-bold font-serif text-emerald-900 mb-4">
         Meet Drogan – More Than a Mascot
       </h3>
@@ -318,10 +302,42 @@ export const About = () => {
       <p className="text-gray-700">
         Whether it’s a walk around the garden or just a cuddle in the lounge, Drogan brings joy to every guest's stay.
       </p>
-      
+    </div>
+
+    {/* Left: Images (shown first on desktop) */}
+    <div className="order-2 md:order-1">
+      <div className="grid grid-cols-2 gap-4">
+        <div className="col-span-2">
+          <img
+            src="/images/a1.jpg"
+            alt="Drogan posing"
+            className="w-full h-80 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+        <img
+          src="/images/a2.jpg"
+          alt="Drogan smiling"
+          className="h-40 object-cover rounded-lg shadow"
+        />
+        <img
+          src="/images/a3.jpg"
+          alt="Drogan with guest"
+          className="h-40 object-cover rounded-lg shadow"
+        />
+      </div>
+
+      {/* View More Button */}
+      <div className="mt-4 text-center">
+    
+        <div id="drogan-more" className="hidden grid grid-cols-2 gap-4 mt-4">
+          <img src="/images/a4.jpg" alt="Drogan extra 1" className="h-40 object-cover rounded-lg shadow" />
+          <img src="/images/a5.jpg" alt="Drogan extra 2" className="h-40 object-cover rounded-lg shadow" />
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 
 
