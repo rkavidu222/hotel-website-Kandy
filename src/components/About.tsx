@@ -315,18 +315,18 @@ export const About = () => {
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2">
           <img
-            src="/images/a1.jpg"
+            src="/images/r1.jfif"
             alt="Drogan posing"
             className="w-full h-80 object-cover rounded-lg shadow-lg"
           />
         </div>
         <img
-          src="/images/a2.jpg"
+           src="/images/r2.jpg"
           alt="Drogan smiling"
           className="h-40 object-cover rounded-lg shadow"
         />
         <img
-          src="/images/a3.jpg"
+           src="/images/r3.jpg"
           alt="Drogan with guest"
           className="h-40 object-cover rounded-lg shadow"
         />
