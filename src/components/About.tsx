@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useState } from "react";
+import { ChevronDown } from "lucide-react"; // ensure Lucide is installed: npm install lucide-react
 
 export const About = () => {
   const images = [
@@ -45,8 +47,6 @@ export const About = () => {
   return (
     <section id="about" className="py-20 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="my-16 w-full h-1 bg-emerald-500"></div>
-        
         {/* About Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 about-section">
           <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
@@ -114,86 +114,218 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="my-16 w-full h-1 bg-emerald-500"></div>
-
         {/* Our Rooms Section */}
-        <div className="mt-16 bg-stone-100 py-12">
-          <h3 className="text-2xl font-serif font-medium text-gray-900 mb-6 text-center" id='rooms'>Our Rooms</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Arundathi</h4>
-              <p className="text-gray-600">
-                It's a celestial retreat where memories are woven with love, and every moment sparkles with promise. Welcome to our most popular honeymoon room, where forever begins.
-              </p>
-            </div>
+        <div id="rooms"></div>
+        <div className="mt-20 bg-gradient-to-b from-stone-100 to-stone-200 py-16 rounded-t-3xl shadow-inner">
+          <h3 className="text-3xl font-serif font-medium text-gray-900 mb-4 text-center">Our Rooms</h3>
+          <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6"></div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Anuththara</h4>
-              <p className="text-gray-600">
-                This room embodies clarity and strength — a sanctuary where your spirit feels unbreakable.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Niramaya</h4>
-              <p className="text-gray-600">
-                A room that inspires moments of inner light and profound understanding.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Sathi</h4>
-              <p className="text-gray-600">
-                A place where awakening meets luxurious comfort.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Satori</h4>
-              <p className="text-gray-600">
-                A room that inspires moments of inner light and profound understanding.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:bg-emerald-50 room-item">
-              <h4 className="text-xl font-semibold text-emerald-700 mb-3">Janana</h4>
-              <p className="text-gray-600">
-                Every shift and change is honored, like clouds drifting over timeless peaks.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-6">
+            {[
+              { name: "Arundathi", description: "It's a celestial retreat where memories are woven with love, and every moment sparkles with promise. Welcome to our most popular honeymoon room, where forever begins." },
+              { name: "Anuththara", description: "This room embodies clarity and strength — a sanctuary where your spirit feels unbreakable." },
+              { name: "Niramaya", description: "A room that inspires moments of inner light and profound understanding." },
+              { name: "Sathi", description: "A place where awakening meets luxurious comfort." },
+              { name: "Satori", description: "A room that inspires moments of inner light and profound understanding." },
+              { name: "Janana", description: "Every shift and change is honored, like clouds drifting over timeless peaks." }
+            ].map((room, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 duration-300"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 bg-stone-200 text-gray-700 rounded-full flex items-center justify-center text-sm font-medium">
+                    {idx + 1}
+                  </div>
+                  <h4 className="text-xl font-semibold text-emerald-700">{room.name}</h4>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">{room.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-
-        <div className="my-16 w-full h-1 bg-emerald-500"></div>
 
         {/* Dining Section */}
-        <div className="mt-16 bg-stone-100 py-12">
-          <h3 className="text-2xl font-serif font-medium text-gray-900 mb-6 text-center">Dining</h3>
-          <div className="text-center mb-8">
-            <p className="text-gray-600 leading-relaxed mb-4">
-              At Villa Vajrapani, we believe that nourishing the mind and body is essential for holistic well-being. Our carefully curated menu features a well-balanced diet filled with nutritious options designed to support gut health and overall vitality. We take pride in sourcing the majority of our ingredients from our own garden or local producers, ensuring freshness and sustainability in every dish. With the flexibility to select meals tailored to your individual requirements, we invite you to embark on a culinary journey that harmonizes health and taste, promoting wellness in every bite.
-            </p>
-            <h4 className="text-xl font-semibold text-emerald-700 mb-4">The Restaurant</h4>
-            <p className="text-gray-600 mb-6">
-              Experience a Minimalistic Design with a View — Nestled next to the kitchen, our space allows you to converse directly with the chef, creating a warm and inviting atmosphere. Large glass windows overlook lush mountains, offering breathtaking vistas that stretch all the way to Adam’s Peak on a clear day. Feel at home in this serene and stylish setting.
-            </p>
-            <p className="text-gray-600 mb-6">
-              **Breakfast:** 07:00–10:00 AM  
-              **Lunch:** 12:00–3:00 PM  
-              **Dinner:** 7:00–10:00 PM
-            </p>
-            <h4 className="text-xl font-semibold text-emerald-700 mb-4">Outdoor Dining</h4>
-            <p className="text-gray-600 mb-6">
-              Select Your Perfect Outdoor Dining Spot — Enjoy the tranquility of our Zen garden, where you can choose from various scenic locations to dine. Whether beside the soothing waterfall, along the spring water stream, overlooking the lush, green, cloud-capped mountains, or atop our rooftop with a breathtaking 360-degree panoramic view — your ideal outdoor dining experience awaits.
-            </p>
-            <h4 className="text-xl font-semibold text-emerald-700 mb-4">Enjoy a Picnic Breakfast with a View</h4>
-            <p className="text-gray-600">
-              Take a hike up the Hanthana Mountains and start your day with an outdoor breakfast amidst stunning panoramic vistas. Immerse yourself in nature and experience the serenity of the mountains — the perfect way to connect with the natural beauty around you.
+        <div id="dining" className="max-w-7xl mx-auto space-y-16 bg-stone-50 rounded-lg p-8 scroll-mt-20">
+          <div className="text-center">
+            <h3 className="text-3xl font-serif font-medium text-gray-900 mb-4">Dining</h3>
+            <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6"></div>
+
+            <p className="text-gray-600 leading-relaxed">
+              At Villa Vajrapani, we believe that nourishing both the mind and body is essential to holistic well-being. 
+              Our thoughtfully curated menu offers a well-balanced diet, rich in nutritious options that support gut health 
+              and enhance overall vitality. We proudly source most of our ingredients from our own garden or trusted local producers, 
+              ensuring every dish is fresh, sustainable, and full of life. With the flexibility to personalize meals according to 
+              your needs, we invite you on a culinary journey that celebrates wellness, harmonizing health and flavor in every bite.
             </p>
           </div>
-        </div>
 
+          {/* Dining Options */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {/* The Restaurant */}
+            <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+              <div className="relative">
+                <img
+                  src="/images/a6.jpeg"
+                  alt="Minimalistic restaurant with view"
+                  className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30 rounded-lg"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-emerald-600 mb-2">01 • The Restaurant</h3>
+              <h4 className="text-lg text-gray-800 mb-4">Minimalistic Design with a View</h4>
+              <p className="text-gray-700 text-sm mb-4">
+                Nestled next to the kitchen, converse directly with our chef while enjoying breathtaking mountain views through large glass windows.
+              </p>
+              <ul className="text-sm text-gray-600">
+                <li><strong>Breakfast:</strong> 07:00–10:00 AM</li>
+                <li><strong>Lunch:</strong> 12:00–3:00 PM</li>
+                <li><strong>Dinner:</strong> 7:00–10:00 PM</li>
+              </ul>
+            </div>
+
+            {/* Outdoor Dining */}
+            <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+              <div className="relative">
+                <img
+                  src="/images/a6.jpeg"
+                  alt="Outdoor dining in Zen garden"
+                  className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30 rounded-lg"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-green-600 mb-2">02 • Outdoor Dining</h3>
+              <h4 className="text-lg text-gray-800 mb-4">Scenic Garden & Rooftop Settings</h4>
+              <p className="text-gray-700 text-sm mb-4">
+                Dine beside a waterfall, by a spring water stream, or atop our rooftop with a panoramic 360° view. The Zen garden’s calm lets you fully immerse in nature as you eat.
+              </p>
+            </div>
+
+            {/* Picnic Breakfast */}
+            <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+              <div className="relative">
+                <img
+                  src="/images/a6.jpeg"
+                  alt="Picnic breakfast with mountain view"
+                  className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30 rounded-lg"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-green-600 mb-2">03 • Picnic Breakfast</h3>
+              <h4 className="text-lg text-gray-800 mb-4">Mountain Morning Bliss</h4>
+              <p className="text-gray-700 text-sm mb-4">
+                Start your morning with a hike up Hanthana, followed by a peaceful breakfast overlooking stunning mountain scenery. Ideal for mindful mornings.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+      {/* Gallery Section */}
+   <div id="gallery"></div>   
+<div  className="mt-20 py-16 bg-stone-100 rounded-t-3xl shadow-inner">
+  <div className="text-center mb-12">
+    <h3 className="text-3xl font-serif font-medium text-gray-900">Gallery</h3>
+    <div className="w-16 h-1 bg-emerald-800 mx-auto mt-2"></div>
+    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+      A glimpse into the serene beauty of Villa Vajrapani – from tranquil spaces to lush landscapes.
+    </p>
+  </div>
+
+  <div className="px-6 about-section">
+    <Swiper
+      modules={[Autoplay, Pagination]}
+      spaceBetween={20}
+      slidesPerView={1}
+      autoplay={{ delay: 4000 }}
+      pagination={{ clickable: true }}
+      loop
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      className="rounded-lg"
+    >
+      {[
+        "/images/a1.jpg",
+        "/images/a2.jpg",
+        "/images/a3.jpg",
+        "/images/a4.jpg",
+        "/images/a5.jpeg",
+        "/images/a6.jpeg",
+        "/images/a1.jpg",
+        "/images/a2.jpg",
+        "/images/a3.jpg",
+        "/images/a4.jpg",
+        "/images/a5.jpeg",
+        "/images/a6.jpeg",
+      ].map((src, idx) => (
+        <SwiperSlide key={idx}>
+          <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <img
+              src={src}
+              alt={`Gallery image ${idx + 1}`}
+              className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+
+
+{/* Meet Drogan - Beloved Mascot Layout */}
+
+
+
+<div id="ambassador-dog" className="py-20 bg-emerald-50 scroll-mt-28">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Left: Large Main Image with Mini Collage */}
+    <div className="grid grid-cols-2 gap-4">
+      <div className="col-span-2">
+        <img
+          src="/images/a1.jpg"
+          alt="Drogan posing"
+          className="w-full h-80 object-cover rounded-lg shadow-lg"
+        />
+      </div>
+      <img
+        src="/images/a2.jpg"
+        alt="Drogan smiling"
+        className="h-40 object-cover rounded-lg shadow"
+      />
+      <img
+        src="/images/a3.jpg"
+        alt="Drogan with guest"
+        className="h-40 object-cover rounded-lg shadow"
+      />
+    </div>
+
+    {/* Right: Content */}
+    <div>
+      <h3 className="text-4xl font-bold font-serif text-emerald-900 mb-4">
+        Meet Drogan – More Than a Mascot
+      </h3>
+      <p className="text-gray-700 text-lg mb-4">
+        Drogan isn’t just our ambassador — he’s a friend, a guardian, and a reason guests fall in love with Villa Vajrapani.
+      </p>
+      <p className="text-gray-700 mb-4">
+        With his warm eyes and wagging tail, he greets everyone like family. Many visitors return just to see him again.
+      </p>
+      <p className="text-gray-700">
+        Whether it’s a walk around the garden or just a cuddle in the lounge, Drogan brings joy to every guest's stay.
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
     </section>
   );
 };

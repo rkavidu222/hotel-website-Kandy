@@ -127,7 +127,7 @@ export const Excursions = () => {
   return (
     <section id="excursions" className="py-20 bg-stone-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="my-16 w-full h-1 bg-emerald-500"></div>
+     
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">Excursions</h2>
           <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6" />
