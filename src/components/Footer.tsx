@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-emerald-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Villa Vajrapani */}
           <div className="col-span-1">
             <h3 className="text-2xl font-serif font-medium mb-4">
@@ -76,6 +76,43 @@ export const Footer = () => {
               <li>
                 <a href="#package-4" className="text-emerald-200 hover:text-white transition-colors">
                   Photography Tour
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* More Links */}
+          <div className="col-span-1">
+            <h4 className="text-lg font-medium mb-4">More</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#offers" className="text-emerald-200 hover:text-white transition-colors">
+                  Offers
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-emerald-200 hover:text-white transition-colors">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#privacy" className="text-emerald-200 hover:text-white transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#cookies" className="text-emerald-200 hover:text-white transition-colors">
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a href="#villa-policies" className="text-emerald-200 hover:text-white transition-colors">
+                  Villa Policies
+                </a>
+              </li>
+              <li>
+                <a href="#blog" className="text-emerald-200 hover:text-white transition-colors">
+                  Vajrapani Blog
                 </a>
               </li>
             </ul>
