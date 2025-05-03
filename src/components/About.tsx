@@ -249,26 +249,32 @@ export const About = () => {
       className="rounded-lg"
     >
       {[
-        "/images/a1.jpg",
-        "/images/a2.jpg",
-        "/images/a3.jpg",
-        "/images/a4.jpg",
-        "/images/a5.jpeg",
-        "/images/a6.jpeg",
-        "/images/a1.jpg",
-        "/images/a2.jpg",
-        "/images/a3.jpg",
-        "/images/a4.jpg",
-        "/images/a5.jpeg",
-        "/images/a6.jpeg",
+        "/images/g1.jpg",
+        "/images/g3.jpeg",
+        "/images/g4.jpg",
+        "/images/g5.jpg",
+        "/images/g6.jpg",
+        "/images/g8.jpeg",
+        "/images/g9.jpg",
+        "/images/g11.jpeg",
+        "/images/g13.jpg",
+        "/images/g14.jpeg",
+        "/images/g15.jpg",
+        "/images/g16.jpeg",
+        "/images/g17.jpeg",
+        "/images/g18.jpg",
+        "/images/g19.jpeg",
+        "/images/g20.jpeg",
+        "/images/g22.jpeg",
       ].map((src, idx) => (
         <SwiperSlide key={idx}>
           <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-            <img
-              src={src}
-              alt={`Gallery image ${idx + 1}`}
-              className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
-            />
+          <img
+  src={src}
+  alt={`Gallery image ${idx + 1}`}
+  className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-105"
+/>
+
           </div>
         </SwiperSlide>
       ))}
