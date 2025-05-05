@@ -248,7 +248,7 @@ export const About = () => {
       className="rounded-lg"
     >
       {[
-        "/images/g1.webp", "/images/g3.webp", "/images/g4.webp", "/images/g5.webp",
+        "/images/h1.webp", "/images/g3.webp", "/images/g4.webp", "/images/g5.webp",
         "/images/g6.webp", "/images/g23.webp", "/images/g9.webp", "/images/g11.webp",
         "/images/g16.webp", "/images/g17.webp", "/images/g18.webp",
         "/images/g19.webp", "/images/g20.webp", "/images/g22.webp",
