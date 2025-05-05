@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const contact = {
-    phone: '0775677560',
+    phone: ' +94 77 567 7560',
     email: 'reservations@villavajrapani.com',
     location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
   };
