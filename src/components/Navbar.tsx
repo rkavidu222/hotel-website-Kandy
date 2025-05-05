@@ -148,26 +148,43 @@ export const Navbar = () => {
             <div className="space-y-3 text-sm">
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-emerald-600" />
-                <span>{contact.phone}</span>
+                <a href={`tel:${contact.phone}`} className="text-emerald-800 hover:text-emerald-600">
+                  {contact.phone}
+                </a>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-600" />
-                <span>{contact.email}</span>
+                <a href={`mailto:${contact.email}`} className="text-emerald-800 hover:text-emerald-600">
+                  {contact.email}
+                </a>
               </p>
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
-                <span>{contact.location}</span>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(contact.location)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-800 hover:text-emerald-600"
+                >
+                  {contact.location}
+                </a>
               </p>
             </div>
+
+            {/* "OR" separator */}
+            <div className="my-4 text-center text-gray-600">or
+
+            {/* Book Online Button */}
             <a
               href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block w-full text-center bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-md shadow-md transition-all font-medium"
+              className="mt-6 inline-block w-full text-center bg-gradient-to-r from-emerald-600 to-emerald-700 hover:bg-gradient-to-l text-white px-4 py-2 rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium"
             >
               Book Online
             </a>
           </div>
+        </div>
         </div>
       )}
     </>

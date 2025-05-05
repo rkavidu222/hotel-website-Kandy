@@ -14,6 +14,7 @@ const commonContact = {
   phone: '0775677560',
   email: 'reservations@villavajrapani.com',
   location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
+  mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.1558582733433!2d80.62551257405072!3d7.223056914640844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae36f6d04090321%3A0xaff282801d364dbb!2sVilla%20Vajrapani!5e0!3m2!1sen!2slk!4v1745767053338!5m2!1sen!2slk'
 };
 
 const packages: Package[] = [
@@ -165,28 +166,48 @@ export const LeisurePackages = () => {
               <X className="w-5 h-5" />
             </button>
             <h4 className="text-xl font-semibold text-emerald-800 mb-4">Contact Information</h4>
+            
+            {/* Contact Information Section */}
             <div className="space-y-3 text-sm md:text-base">
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-600" />
-                <span>{commonContact.phone}</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-emerald-600" />
-                <span>{commonContact.email}</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
-                <span>{commonContact.location}</span>
-              </p>
+              <div className="flex flex-col gap-2">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-emerald-600" />
+                  <a href={`tel:${commonContact.phone}`} className="text-emerald-600 hover:underline">
+                    {commonContact.phone}
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-emerald-600" />
+                  <a href={`mailto:${commonContact.email}`} className="text-emerald-600 hover:underline">
+                    {commonContact.email}
+                  </a>
+                </p>
+                <p className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
+                  <a
+                    href={commonContact.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 hover:underline"
+                  >
+                    {commonContact.location}
+                  </a>
+                </p>
+              </div>
+
+              {/* "OR" separator */}
+              <div className="my-4 text-center text-gray-600">or</div>
+
+              {/* Book Online Button */}
+              <a
+                href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 block w-full bg-gradient-to-r from-emerald-600 to-green-500 text-white text-center py-2 rounded-full shadow-md hover:scale-105 transition"
+              >
+                Book Online
+              </a>
             </div>
-            <a
-              href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 block w-full bg-gradient-to-r from-emerald-600 to-green-500 text-white text-center py-2 rounded-full shadow-md hover:scale-105 transition"
-            >
-              Book Online
-            </a>
           </div>
         </div>
       )}
