@@ -14,9 +14,8 @@ export const Navbar = () => {
 
   const handleLinkClick = () => {
     setIsDropdownOpen(false);
-    setIsMenuOpen(false); // Close mobile menu when any link is clicked
+    setIsMenuOpen(false);
   };
-  
 
   return (
     <>
@@ -51,21 +50,11 @@ export const Navbar = () => {
                   </button>
                   {isDropdownOpen && (
                     <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg z-10 w-48">
-                      <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                        About Us
-                      </a>
-                      <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                        Our Rooms
-                      </a>
-                      <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                        Dining
-                      </a>
-                      <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                        Gallery
-                      </a>
-                      <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                        Meet Drogan
-                      </a>
+                      <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">About Us</a>
+                      <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Our Rooms</a>
+                      <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Dining</a>
+                      <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Gallery</a>
+                      <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Meet Drogan</a>
                     </div>
                   )}
                 </div>
@@ -107,9 +96,7 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white shadow-lg transform transition-transform duration-500 ease-in-out translate-x-0">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#home" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
-                Home
-              </a>
+              <a href="#home" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">Home</a>
               <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -123,31 +110,16 @@ export const Navbar = () => {
                 </button>
                 {isDropdownOpen && (
                   <div className="bg-white shadow-lg rounded-lg mt-2">
-                    <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                      About Us
-                    </a>
-                    <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                      Our Rooms
-                    </a>
-                    <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                      Dining
-                    </a>
-                    <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                      Gallery
-                    </a>
-                    <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">
-                      Meet Drogan
-                    </a>
+                    <a href="#about" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">About Us</a>
+                    <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Our Rooms</a>
+                    <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Dining</a>
+                    <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Gallery</a>
+                    <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Meet Drogan</a>
                   </div>
                 )}
               </div>
-
-              <a href="#packages" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
-                Leisure Packages
-              </a>
-              <a href="#excursions" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">
-                Excursions
-              </a>
+              <a href="#packages" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">Leisure Packages</a>
+              <a href="#excursions" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-800 transform transition-all hover:scale-105">Excursions</a>
               <button
                 onClick={() => {
                   setShowPopup(true);
@@ -187,6 +159,14 @@ export const Navbar = () => {
                 <span>{contact.location}</span>
               </p>
             </div>
+            <a
+              href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block w-full text-center bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-md shadow-md transition-all font-medium"
+            >
+              Book Online
+            </a>
           </div>
         </div>
       )}
