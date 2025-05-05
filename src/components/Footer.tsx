@@ -15,10 +15,10 @@ export const Footer = () => {
               A luxury mountain retreat where tranquility, mindfulness, and nature unite.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-emerald-200 hover:text-white transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/villavajrapani/" className="text-emerald-200 hover:text-white transition-colors" aria-label="Facebook">
                 <FacebookIcon size={20} />
               </a>
-              <a href="#" className="text-emerald-200 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/villa_vajrapani/reel/DEcUMhQBrP8/" className="text-emerald-200 hover:text-white transition-colors" aria-label="Instagram">
                 <InstagramIcon size={20} />
               </a>
               <a href="#" className="text-emerald-200 hover:text-white transition-colors" aria-label="Twitter">
