@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/images/h1.jpg',
-  '/images/h2.jpg',
-  '/images/h3.jpg',
-  '/images/h4.jpg',
-  '/images/h5.jpg',
-  '/images/h6.jpg',
-  '/images/h7.jpg',
+  '/images/h1.webp',
+  '/images/h2.webp',
+  '/images/h3.webp',
+  '/images/h4.webp',
+  '/images/h5.webp',
+  '/images/h6.webp',
+  '/images/h7.webp',
 ];
 
 export const Hero = () => {

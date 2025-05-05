@@ -25,9 +25,9 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'Immerse yourself in the serenity of nature with guided hikes and forest bathing experiences.',
     images: [
-      '/images/p1.jpg',
-      '/images/p2.jpg',
-      '/images/p3.jpg',
+      '/images/p1.webp',
+      '/images/p2.webp',
+      '/images/p3.webp',
     ],
     activities: [
       'Day 1: Meet and greet, rest, bird watching tour',
@@ -41,9 +41,9 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Deepen your connection with nature through extended exploration and mindful experiences.',
     images: [
-      '/images/p4.jpg',
-      '/images/p5.jpg',
-      '/images/p6.jpg',
+      '/images/p4.webp',
+      '/images/p5.webp',
+      '/images/p6.webp',
     ],
     activities: [
       'Day 1: Meet and greet, evening bird watching tour',
@@ -57,9 +57,9 @@ const packages: Package[] = [
     duration: '3 Days',
     description: 'Push your boundaries while exploring historic tea estates and breathtaking landscapes.',
     images: [
-      '/images/p7.jpg',
-      '/images/p8.jpeg',
-      '/images/p9.jpg',
+      '/images/p7.webp',
+      '/images/p8.webp',
+      '/images/p9.webp',
     ],
     activities: [
       'Day 1: Cross Katusukonda hike to enter Pekoe trail stage one, visit first tea estate of Sri Lanka',
@@ -73,9 +73,9 @@ const packages: Package[] = [
     duration: '2 Days',
     description: 'Capture the beauty of Vajrapani gardens and the Hanthana mountain range through your lens.',
     images: [
-      '/images/p10.JPG',
-      '/images/p11.JPG',
-      '/images/p12.jpg',
+      '/images/p10.webp',
+      '/images/p11.webp',
+      '/images/p12.webp',
     ],
     activities: [
       'Day 1: Guided photography sessions in Vajrapani garden',

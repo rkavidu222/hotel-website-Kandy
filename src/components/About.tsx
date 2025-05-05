@@ -8,12 +8,12 @@ import { ChevronDown } from "lucide-react"; // ensure Lucide is installed: npm i
 
 export const About = () => {
   const images = [
-    "/images/a1.jpg",
-    "/images/a2.jpg",
-    "/images/a3.jpg",
-    "/images/a4.jpg",
-    "/images/a5.jpeg",
-    "/images/a6.jpeg",
+    "/images/a1.webp",
+    "/images/a2.webp",
+    "/images/a3.webp",
+    "/images/a4.webp",
+    "/images/a5.webp",
+    "/images/a6.webp",
   ];
 
   // Scroll Reveal Functionality with Reset
@@ -166,7 +166,7 @@ export const About = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
               <div className="relative">
                 <img
-                  src="/images/a6.jpeg"
+                  src="/images/g8.webp"
                   alt="Minimalistic restaurant with view"
                   className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
                 />
@@ -188,7 +188,7 @@ export const About = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
               <div className="relative">
                 <img
-                  src="/images/a6.jpeg"
+                  src="/images/d2.webp"
                   alt="Outdoor dining in Zen garden"
                   className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
                 />
@@ -205,7 +205,7 @@ export const About = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
               <div className="relative">
                 <img
-                  src="/images/a6.jpeg"
+                  src="/images/d3.webp"
                   alt="Picnic breakfast with mountain view"
                   className="w-full h-72 object-cover rounded-lg mb-6 transition-transform transform hover:scale-110 duration-500"
                 />
@@ -222,9 +222,8 @@ export const About = () => {
       </div>
 
 
-      {/* Gallery Section */}
-   <div id="gallery"></div>   
-<div  className="mt-20 py-16 bg-stone-100 rounded-t-3xl shadow-inner">
+   {/* Gallery Section */}
+<section id="gallery" className="mt-20 py-16 bg-stone-100 rounded-t-3xl shadow-inner scroll-mt-28">
   <div className="text-center mb-12">
     <h3 className="text-3xl font-serif font-medium text-gray-900">Gallery</h3>
     <div className="w-16 h-1 bg-emerald-800 mx-auto mt-2"></div>
@@ -233,7 +232,7 @@ export const About = () => {
     </p>
   </div>
 
-  <div className="px-6 about-section">
+  <div className="px-6 max-w-7xl mx-auto">
     <Swiper
       modules={[Autoplay, Pagination]}
       spaceBetween={20}
@@ -249,36 +248,26 @@ export const About = () => {
       className="rounded-lg"
     >
       {[
-        "/images/g1.jpg",
-        "/images/g3.jpeg",
-        "/images/g4.jpg",
-        "/images/g5.jpg",
-        "/images/g6.jpg",
-        "/images/g8.jpeg",
-        "/images/g9.jpg",
-        "/images/g11.jpeg",
-        "/images/g15.jpg",
-        "/images/g16.jpeg",
-        "/images/g17.jpeg",
-        "/images/g18.jpg",
-        "/images/g19.jpeg",
-        "/images/g20.jpeg",
-        "/images/g22.jpeg",
+        "/images/g1.webp", "/images/g3.webp", "/images/g4.webp", "/images/g5.webp",
+        "/images/g6.webp", "/images/g23.webp", "/images/g9.webp", "/images/g11.webp",
+        "/images/g15.webp", "/images/g16.webp", "/images/g17.webp", "/images/g18.webp",
+        "/images/g19.webp", "/images/g20.webp", "/images/g22.webp",
       ].map((src, idx) => (
         <SwiperSlide key={idx}>
           <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-          <img
-  src={src}
-  alt={`Gallery image ${idx + 1}`}
-  className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-105"
-/>
-
+            <img
+              src={src}
+              alt={`Gallery image ${idx + 1}`}
+              loading="lazy"
+              className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-105"
+            />
           </div>
         </SwiperSlide>
       ))}
     </Swiper>
   </div>
-</div>
+</section>
+
 
 
 {/* Meet Drogan - Beloved Mascot Layout */}
@@ -319,25 +308,19 @@ export const About = () => {
           />
         </div>
         <img
-           src="/images/r2.jpg"
+           src="/images/r2.webp"
           alt="Drogan smiling"
           className="h-40 object-cover rounded-lg shadow"
         />
         <img
-           src="/images/r3.jpg"
+           src="/images/r3.webp"
           alt="Drogan with guest"
           className="h-40 object-cover rounded-lg shadow"
         />
       </div>
 
-      {/* View More Button */}
-      <div className="mt-4 text-center">
-    
-        <div id="drogan-more" className="hidden grid grid-cols-2 gap-4 mt-4">
-          <img src="/images/a4.jpg" alt="Drogan extra 1" className="h-40 object-cover rounded-lg shadow" />
-          <img src="/images/a5.jpg" alt="Drogan extra 2" className="h-40 object-cover rounded-lg shadow" />
-        </div>
-      </div>
+      
+     
     </div>
   </div>
 </div>

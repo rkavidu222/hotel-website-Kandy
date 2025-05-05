@@ -17,9 +17,9 @@ const excursions: Excursion[] = [
     details: 'Visit a traditional village, interact with locals, learn how to cook local cuisine, and enjoy a bullock cart ride.',
     moreDetails: 'You’ll witness daily rural routines, traditional farming techniques, and enjoy a home-cooked lunch. Great for families and cultural explorers.',
     images: [
-      '/images/e1.JPG',
-      '/images/e2.JPG',
-      '/images/e3.JPG',
+      '/images/e1.webp',
+      '/images/e2.webp',
+      '/images/e3.webp',
     ]
   },
   {
@@ -28,9 +28,9 @@ const excursions: Excursion[] = [
     details: 'Tour a working tea factory, observe leaf processing, taste fresh Ceylon tea, and explore tea fields.',
     moreDetails: 'You’ll learn about tea grading, export processes, and get a souvenir pack of Ceylon tea. Ideal for tea lovers and photographers.',
     images: [
-      '/images/e4.JPG',
+      '/images/e4.webp',
       '/images/e5.jfif',
-      '/images/e6.jpg',
+      '/images/e6.webp',
     ]
   },
   {
@@ -39,9 +39,9 @@ const excursions: Excursion[] = [
     details: 'Guided by naturalists, this tour offers ideal spots for birdwatching and nature photography around Vajrapani.',
     moreDetails: 'Perfect for early risers and photographers. Bring your own binoculars and gear, or rent on-site. Ideal for nature enthusiasts.',
     images: [
-      '/images/e7.JPG',
-      '/images/e8.JPG',
-      '/images/e9.JPG',
+      '/images/e7.webp',
+      '/images/e8.webp',
+      '/images/e9.webp',
     ]
   },
   {
@@ -50,9 +50,9 @@ const excursions: Excursion[] = [
     details: 'Stroll through orchid houses, palm avenues, and spice gardens in Peradeniya.',
     moreDetails: 'This leisurely tour includes a guided walk and optional golf cart rental. Ideal for all ages.',
     images: [
-      '/images/e10.JPG',
-      '/images/e11.jpg',
-      '/images/e12.jpg',
+      '/images/e10.webp',
+      '/images/e11.webp',
+      '/images/e12.webp',
     ]
   },
   {
@@ -61,9 +61,9 @@ const excursions: Excursion[] = [
     details: 'Trek to the scenic Katusukonda mountain and enjoy a night of camping with views.',
     moreDetails: 'Includes tents, meals, and a campfire under the stars. Great for hikers and groups.',
     images: [
-      '/images/e13.jpg',
-      '/images/e14.JPG',
-      '/images/e15.jpg',
+      '/images/e13.webp',
+      '/images/e14.webp',
+      '/images/e15.webp',
     ]
   },
   {
@@ -72,9 +72,9 @@ const excursions: Excursion[] = [
     details: 'Explore the Temple of the Tooth, Kandy Lake, cultural shows, and shopping streets.',
     moreDetails: 'Includes entrance tickets, cultural performance seats, and guide. Perfect for first-time visitors.',
     images: [
-      '/images/e16.jpeg',
+      '/images/e16.webp',
       '/images/e17.jfif',
-      '/images/e18.jpg',
+      '/images/e18.webp',
     ]
   },
   {
@@ -83,9 +83,9 @@ const excursions: Excursion[] = [
     details: 'Tour historical and religious temple sites nestled in the hills of central Sri Lanka.',
     moreDetails: 'A peaceful experience with spiritual guides and historical context. Best done in the morning.',
     images: [
-      '/images/e19.jpg',
-      '/images/e20.JPG',
-      '/images/e21.jpg',
+      '/images/e19.webp',
+      '/images/e20.webp',
+      '/images/e21.webp',
     ]
   },
 ];
