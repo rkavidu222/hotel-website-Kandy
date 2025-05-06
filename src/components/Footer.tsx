@@ -3,7 +3,7 @@ import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon, FacebookIcon, TwitterIc
 
 export const Footer = () => {
   return (
-    <footer className="bg-emerald-900 text-white">
+    <footer className="bg-[#4a6157] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-5 gap-8">
           {/* Villa Vajrapani */}
@@ -11,17 +11,17 @@ export const Footer = () => {
             <h3 className="text-2xl font-serif font-medium mb-4">
               Villa Vajrapani
             </h3>
-            <p className="text-emerald-100 mb-6">
+            <p className="mb-6">
               A luxury mountain retreat where tranquility, mindfulness, and nature unite.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/villavajrapani/" className="text-emerald-200 hover:text-white transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/villavajrapani/" className="hover:text-white transition-colors" aria-label="Facebook">
                 <FacebookIcon size={20} />
               </a>
-              <a href="https://www.instagram.com/villa_vajrapani/reel/DEcUMhQBrP8/" className="text-emerald-200 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/villa_vajrapani/reel/DEcUMhQBrP8/" className="hover:text-white transition-colors" aria-label="Instagram">
                 <InstagramIcon size={20} />
               </a>
-              <a href="#" className="text-emerald-200 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="#" className="hover:text-white transition-colors" aria-label="Twitter">
                 <TwitterIcon size={20} />
               </a>
             </div>
@@ -32,22 +32,22 @@ export const Footer = () => {
             <h4 className="text-lg font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#home" className="hover:text-white transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#about" className="hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#packages" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#packages" className="hover:text-white transition-colors">
                   Leisure Packages
                 </a>
               </li>
               <li>
-                <a href="#excursions" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#excursions" className="hover:text-white transition-colors">
                   Excursions
                 </a>
               </li>
@@ -59,22 +59,22 @@ export const Footer = () => {
             <h4 className="text-lg font-medium mb-4">Packages</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#package-1" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#package-1" className="hover:text-white transition-colors">
                   Connect with Nature
                 </a>
               </li>
               <li>
-                <a href="#package-2" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#package-2" className="hover:text-white transition-colors">
                   In Harmony with Nature
                 </a>
               </li>
               <li>
-                <a href="#package-3" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#package-3" className="hover:text-white transition-colors">
                   Mind-Body Challenge
                 </a>
               </li>
               <li>
-                <a href="#package-4" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#package-4" className="hover:text-white transition-colors">
                   Photography Tour
                 </a>
               </li>
@@ -86,32 +86,32 @@ export const Footer = () => {
             <h4 className="text-lg font-medium mb-4">More</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#offers" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#offers" className="hover:text-white transition-colors">
                   Offers
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#contact" className="hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#privacy" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#privacy" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#cookies" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#cookies" className="hover:text-white transition-colors">
                   Cookie Policy
                 </a>
               </li>
               <li>
-                <a href="#villa-policies" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#villa-policies" className="hover:text-white transition-colors">
                   Villa Policies
                 </a>
               </li>
               <li>
-                <a href="#blog" className="text-emerald-200 hover:text-white transition-colors">
+                <a href="#blog" className="hover:text-white transition-colors">
                   Vajrapani Blog
                 </a>
               </li>
@@ -123,18 +123,18 @@ export const Footer = () => {
             <h4 className="text-lg font-medium mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPinIcon size={20} className="mr-2 flex-shrink-0 mt-1 text-emerald-300" />
-                <span className="text-emerald-100">
+                <MapPinIcon size={20} className="mr-2 flex-shrink-0 mt-1" />
+                <span>
                   40/1 Galouawatta, Upland, Peradeniya, Sri Lanka
                 </span>
               </li>
               <li className="flex items-center">
-                <PhoneIcon size={18} className="mr-2 flex-shrink-0 text-emerald-300" />
-                <span className="text-emerald-100"> +94 77 567 7560</span>
+                <PhoneIcon size={18} className="mr-2 flex-shrink-0" />
+                <span> +94 77 567 7560</span>
               </li>
               <li className="flex items-center">
-                <MailIcon size={18} className="mr-2 flex-shrink-0 text-emerald-300" />
-                <span className="text-emerald-100">
+                <MailIcon size={18} className="mr-2 flex-shrink-0" />
+                <span>
                   reservations@villavajrapani.com
                 </span>
               </li>
@@ -156,7 +156,7 @@ export const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-emerald-800 mt-12 pt-8 text-center text-emerald-300 text-sm">
+        <div className="border-t border-emerald-800 mt-12 pt-8 text-center text-sm">
           <p>
             © {new Date().getFullYear()} Villa Vajrapani. All rights reserved.
           </p>

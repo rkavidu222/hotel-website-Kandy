@@ -1,6 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 
+
+import { Helmet } from 'react-helmet-async';
+
+
 const images = [
   '/images/h1.webp',
   '/images/h2.webp',

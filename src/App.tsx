@@ -1,12 +1,16 @@
 import React from 'react';
+import SEO from './components/SEO';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { LeisurePackages } from './components/LeisurePackages';
 import { Excursions } from './components/Excursions';
 import { Footer } from './components/Footer';
+
 export function App() {
-  return <div className="font-sans antialiased text-gray-800 bg-stone-50">
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-stone-50">
+      <SEO />
       <Navbar />
       <main>
         <Hero />
@@ -15,5 +19,6 @@ export function App() {
         <Excursions />
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 }
