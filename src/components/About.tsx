@@ -16,6 +16,9 @@ export const About = () => {
     "/images/a6.webp",
   ];
 
+
+  
+
   // Scroll Reveal Functionality with Reset
   const revealOnScroll = () => {
     const elements = document.querySelectorAll('.about-section, .room-item');
@@ -114,36 +117,56 @@ export const About = () => {
           </div>
         </div>
 
+<br></br>
         {/* Our Rooms Section */}
-        <div id="rooms"></div>
-        <div className="mt-20 bg-gradient-to-b from-stone-100 to-stone-200 py-16 rounded-t-3xl shadow-inner">
-          <h3 className="text-3xl font-serif font-medium text-gray-900 mb-4 text-center">Our Rooms</h3>
-          <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6"></div>
+        
+        <div id="rooms" className="relative min-h-[90vh] overflow-hidden">
+  {/* Slideshow background */}
+  <div className="absolute inset-0 z-0">
+    {["/images/rm1.webp", "/images/rm2.webp", "/images/rm3.webp", "/images/g6.webp", "/images/g9.webp"].map((src, i) => (
+      <img
+        key={i}
+        src={src}
+        className="absolute inset-0 w-full h-full object-cover opacity-0 animate-fadeSlide"
+        style={{ animationDelay: `${i * 8}s` }}
+      />
+    ))}
+    <div className="absolute inset-0 bg-black bg-opacity-60"></div> {/* Dark overlay to enhance readability */}
+  </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-6">
-            {[
-              { name: "Arundathi", description: "It's a celestial retreat where memories are woven with love, and every moment sparkles with promise. Welcome to our most popular honeymoon room, where forever begins." },
-              { name: "Anuththara", description: "This room embodies clarity and strength — a sanctuary where your spirit feels unbreakable." },
-              { name: "Niramaya", description: "A room that inspires moments of inner light and profound understanding." },
-              { name: "Sathi", description: "A place where awakening meets luxurious comfort." },
-              { name: "Satori", description: "A room that inspires moments of inner light and profound understanding." },
-              { name: "Janana", description: "Every shift and change is honored, like clouds drifting over timeless peaks." }
-            ].map((room, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 duration-300"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 bg-stone-200 text-gray-700 rounded-full flex items-center justify-center text-sm font-medium">
-                    {idx + 1}
-                  </div>
-                  <h4 className="text-xl font-semibold text-emerald-700">{room.name}</h4>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{room.description}</p>
-              </div>
-            ))}
+  {/* Content Overlay */}
+  <div className="relative z-10 max-w-6xl mx-auto py-24 px-6 text-white">
+    <h3 className="text-4xl font-serif mb-6 text-center text-emerald-300">Our Rooms</h3>
+    <div className="w-16 h-1 bg-emerald-800 mx-auto mb-6"></div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {[
+        { name: "Arundathi", description: "It's a celestial retreat where memories are woven with love, and every moment sparkles with promise. Welcome to our most popular honeymoon room, where forever begins." },
+        { name: "Anuththara", description: "This room embodies clarity and strength — a sanctuary where your spirit feels unbreakable." },
+        { name: "Niramaya", description: "A room that inspires moments of inner light and profound understanding." },
+        { name: "Sathi", description: "A place where awakening meets luxurious comfort." },
+        { name: "Satori", description: "A room that inspires moments of inner light and profound understanding." },
+        { name: "Janana", description: "Every shift and change is honored, like clouds drifting over timeless peaks." }
+      ].map((room, idx) => (
+        <div
+          key={idx}
+          className="bg-white bg-opacity-30 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 duration-300"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center text-sm font-medium">
+              {idx + 1}
+            </div>
+            <h4 className="text-xl font-semibold text-emerald-200">{room.name}</h4>
           </div>
+          <p className="text-sm text-white opacity-90">{room.description}</p>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+        
 
         {/* Dining Section */}
         <div id="dining" className="max-w-7xl mx-auto space-y-16 bg-stone-50 rounded-lg p-8 scroll-mt-20">
@@ -270,7 +293,7 @@ export const About = () => {
 
 
 
-{/* Meet Drogan - Beloved Mascot Layout */}
+{/* Meet Drogan - Beloved Mascot Layout 
 
 <div id="ambassador-dog" className="py-20 bg-emerald-50 scroll-mt-28">
 <div className="text-center mb-12">
@@ -281,7 +304,7 @@ export const About = () => {
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
  
-    {/* Right: Content (shown first on mobile) */}
+    {/* Right: Content (shown first on mobile) 
     <div className="order-1 md:order-2">
       <h3 className="text-4xl font-bold font-serif text-emerald-900 mb-4">
         Meet Drogan – More Than a Mascot
@@ -297,7 +320,7 @@ export const About = () => {
       </p>
     </div>
 
-    {/* Left: Images (shown first on desktop) */}
+    {/* Left: Images (shown first on desktop) 
     <div className="order-2 md:order-1">
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2">
@@ -324,7 +347,7 @@ export const About = () => {
     </div>
   </div>
 </div>
-
+ */}
 
 
 

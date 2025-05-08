@@ -54,7 +54,6 @@ export const Navbar = () => {
                       <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Our Rooms</a>
                       <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Dining</a>
                       <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Gallery</a>
-                      <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Meet Drogan</a>
                     </div>
                   )}
                 </div>
@@ -114,7 +113,6 @@ export const Navbar = () => {
                     <a href="#rooms" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Our Rooms</a>
                     <a href="#dining" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Dining</a>
                     <a href="#gallery" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Gallery</a>
-                    <a href="#ambassador-dog" onClick={handleLinkClick} className="block px-4 py-2 text-gray-700 hover:bg-emerald-100">Meet Drogan</a>
                   </div>
                 )}
               </div>
