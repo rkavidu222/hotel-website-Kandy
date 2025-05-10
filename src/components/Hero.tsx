@@ -1,40 +1,21 @@
-
-import React, { useState, useEffect } from 'react';
-
-
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-const images = [
-  '/images/h1.webp',
-  '/images/h2.webp',
-  '/images/h3.webp',
-  '/images/h4.webp',
-  '/images/h5.webp',
-  '/images/h6.webp',
-  '/images/h7.webp',
-];
-
 export const Hero = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 4000); // Change image every 4 seconds
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Background Images */}
-      {images.map((img, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
-          style={{ backgroundImage: `url(${img})` }}
-        />
-      ))}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover object-center"
+      >
+        <source src="/video/0510.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />
