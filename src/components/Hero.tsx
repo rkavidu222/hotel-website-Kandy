@@ -18,7 +18,7 @@ export const Hero = () => {
 
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/*  <div className="absolute inset-0 bg-black/50" />*/}
 
       {/* Hero Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
