@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 
-
 export const Hero = () => {
   return (
     <>
@@ -23,9 +22,6 @@ export const Hero = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* Optional Overlay */}
-        {/* <div className="absolute inset-0 bg-black/50" /> */}
-
         {/* Scroll Down Arrow */}
         <div className="absolute bottom-10 left-0 right-0 flex justify-center z-10">
           <a href="#hero-text" className="animate-bounce bg-white/20 p-2 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -37,7 +33,7 @@ export const Hero = () => {
       </section>
 
       {/* Section 2: Hero Text Content with Modern Style */}
-       <section
+      <section
         id="hero-text"
         className="relative bg-gradient-to-b from-black via-gray-900 to-black py-16 sm:py-20 px-4 sm:px-6 lg:px-8 text-center"
       >
@@ -108,9 +104,6 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
       </section>
-
-
-
     </>
   );
 };
