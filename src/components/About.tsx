@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useState } from "react";
-import { ChevronDown } from "lucide-react"; // ensure Lucide is installed: npm install lucide-react
+import { ChevronDown } from "lucide-react"; 
 
 export const About = () => {
   const images = [
@@ -62,6 +62,7 @@ export const About = () => {
             a unique haven for relaxation and renewal.
           </p>
         </div>
+        
 
         {/* Image Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
