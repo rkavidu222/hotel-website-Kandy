@@ -85,7 +85,7 @@ export const Hero = () => {
                 rel="noopener noreferrer"
                 className="underline hover:text-white"
               >
-                40/1 Galouawatta, Upland, Peradeniya, Sri Lanka
+                40/1  Upland, Peradeniya, Sri Lanka
               </a>
             </p>
             <p><strong>📞 Phone:</strong> +94 77 567 7560</p>

@@ -9,7 +9,7 @@ export const Navbar = () => {
   const contact = {
     phone: ' +94 77 567 7560',
     email: 'reservations@villavajrapani.com',
-    location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
+    location: '40/1 , Upland, Peradeniya, Sri Lanka',
   };
 
   const handleLinkClick = () => {

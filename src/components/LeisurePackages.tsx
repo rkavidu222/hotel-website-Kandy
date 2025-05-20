@@ -13,7 +13,7 @@ type Package = {
 const commonContact = {
   phone: ' +94 77 567 7560',
   email: 'reservations@villavajrapani.com',
-  location: '40/1 Galouawatta, Upland, Peradeniya, Sri Lanka',
+  location: '40/1 , Upland, Peradeniya, Sri Lanka',
   mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.1558582733433!2d80.62551257405072!3d7.223056914640844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae36f6d04090321%3A0xaff282801d364dbb!2sVilla%20Vajrapani!5e0!3m2!1sen!2slk!4v1745767053338!5m2!1sen!2slk'
 };
 
