@@ -93,7 +93,7 @@ const excursions: Excursion[] = [
 export const Excursions = () => {
   const [selectedExcursion, setSelectedExcursion] = useState<Excursion | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isClient, setIsClient] = useState(false); // Prevent hydration mismatch
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
     setIsClient(true);

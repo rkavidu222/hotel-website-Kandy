@@ -200,7 +200,7 @@ export const LeisurePackages = () => {
 
               {/* Book Online Button */}
               <a
-                href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe_GRmPkRv7zXFBkCdbxbO8gNvulWsWy0yrlpXxH4-ZSCnYsg/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 block w-full bg-gradient-to-r from-emerald-600 to-green-500 text-white text-center py-2 rounded-full shadow-md hover:scale-105 transition"

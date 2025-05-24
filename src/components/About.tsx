@@ -17,15 +17,12 @@ export const About = () => {
   ];
 
 
-  
-
-  // Scroll Reveal Functionality with Reset
   const revealOnScroll = () => {
     const elements = document.querySelectorAll('.about-section, .room-item');
 
     const options = {
-      threshold: 0.2, // Trigger animation when 20% of the element is in the viewport
-      rootMargin: '0px 0px -50px 0px', // Add a bit of extra space when scrolling up or down
+      threshold: 0.2, 
+      rootMargin: '0px 0px -50px 0px', 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -33,7 +30,7 @@ export const About = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         } else {
-          entry.target.classList.remove('visible'); // Remove 'visible' class when it leaves
+          entry.target.classList.remove('visible'); 
         }
       });
     }, options);
@@ -125,7 +122,6 @@ export const About = () => {
         {/* Our Rooms Section */}
         
         <div id="rooms" className="relative min-h-[90vh] overflow-hidden">
-          {/* Slideshow background */}
           <div className="absolute inset-0 z-0">
             {["/images/rm1.webp", "/images/rm2.webp", "/images/rm3.webp", "/images/g6.webp", "/images/g9.webp"].map((src, i) => (
               <img
@@ -135,7 +131,7 @@ export const About = () => {
                 style={{ animationDelay: `${i * 8}s` }}
               />
             ))}
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div> {/* Dark overlay to enhance readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-60"></div> 
           </div>
 
           {/* Content Overlay */}

@@ -174,7 +174,7 @@ export const Navbar = () => {
 
             {/* Book Online Button */}
             <a
-              href="https://www.booking.com/hotel/lk/vajrapani-kandy.html"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe_GRmPkRv7zXFBkCdbxbO8gNvulWsWy0yrlpXxH4-ZSCnYsg/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block w-full text-center bg-gradient-to-r from-emerald-600 to-emerald-700 hover:bg-gradient-to-l text-white px-4 py-2 rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-medium"
